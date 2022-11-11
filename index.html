@@ -13,7 +13,7 @@
         </script>
     
     
-    <title>Mathematical methods for economic theory: 7.3 Exercises on optimization with inequality constraints: the sufficiency of the Kuhn-Tucker conditions</title>
+    <title>Mathematical methods for economic theory: 7.4 Exercises on optimization with inequality constraints: nonnegativity conditions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="">
         <meta name="keywords" content="">
@@ -202,14 +202,14 @@
                                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/40"><img alt="Previous section" src="./index_files/backsec.gif" height="20" title="Kuhn-Tucker conditions"></a>
                                 </span>
 
-                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/42"><img alt="Previous page" src="./index_files/back.gif" height="20" title="Kuhn-Tucker conditions"></a>
+                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/43"><img alt="Previous page" src="./index_files/back.gif" height="20" title="Kuhn-Tucker conditions"></a>
                 
                 <span class="tab">
                     <span class="contents"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/toc" class="menuAction">Contents</a></span>
                 </span>
 
                                     <span class="tab">
-                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/kts/t" class="menuAction">Text</a></span>
+                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/nnc/t" class="menuAction">Text</a></span>
                     </span>
 
                                             <span class="tab">
@@ -222,7 +222,7 @@
                             <span class="tab">
                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/sch" class="menuAction" title="Search"><img alt="Search" src="./index_files/searchIcon.png"></a>
                 </span>
-                                        <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/44"><img alt="Next page" src="./index_files/next.gif" height="20" title="Nonnegativity conditions"></a>
+                                        <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/45"><img alt="Next page" src="./index_files/next.gif" height="20" title="Optimization: summary"></a>
                             <span class="hideable">
                                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/46"><img alt="Next section" src="./index_files/nextsec.gif" height="20" title="Differential equations"></a>
                                 </span>
@@ -268,108 +268,485 @@ window.onclick = function(event) {
         <div id="exercises">
 
         <header>
-            <h2>7.3 Exercises on optimization with inequality constraints: the sufficiency of the Kuhn-Tucker conditions</h2>
+            <h2>7.4 Exercises on optimization with inequality constraints: nonnegativity conditions</h2>
         </header>
 
 	<ol type="1">
-<li>For each possible value of the constant <i>a</i>, solve the problem
-<div class="equation">max<sub><i>x</i>,<i>y</i></sub> <i>x</i>&nbsp;+ <i>a</i><i>y</i> subject to <i>x</i><sup>2</sup>&nbsp;+ <i>y</i><sup>2</sup>&nbsp;≤ 1 and <i>x</i>&nbsp;+ <i>y</i>&nbsp;≥ 0.</div>
+<li>Solve the problem
+<div class="equation">max<sub><i>x</i>,<i>y</i></sub><i>x</i><sup>2</sup><i>y</i><sup>2</sup> subject to 2<i>x</i>&nbsp;+ <i>y</i>&nbsp;≤ 2, <i>x</i>&nbsp;≥ 0, and <i>y</i>&nbsp;≥ 0.</div>
+[You may use without proof the fact that <i>x</i><sup>2</sup><i>y</i><sup>2</sup> is quasiconcave for <i>x</i>&nbsp;≥ 0 and <i>y</i>&nbsp;≥ 0.]
 <p>
 <a class="action" href="javascript:toggleSolution(1)">Solution</a></p><div class="solution" id="1" style="display: block;">
-The Kuhn-Tucker conditions are necessary and sufficient because <i style="padding-right:0.2em;">f</i> is concave, each <i>g</i><sub><i>j</i></sub> is convex, and there exists a point <i>x</i> such that <i>g</i><sub><i>j</i></sub>(<i>x</i>)&nbsp;&lt; <i>c</i><sub><i>j</i></sub> for each <i>j</i> (for example, (1/4,&nbsp;1/4)).
+The constraints are concave, so the KT conditions are necessary.  The objective function is quasiconcave, and the constraint is quasiconvex.  So if ∇<i style="padding-right:0.2em;">f</i>(<i>x</i>*,&nbsp;<i>y</i>*)&nbsp;≠ (0,&nbsp;...,&nbsp;0) and (<i>x</i>*,&nbsp;<i>y</i>*,&nbsp;λ*) satisfies the KT conditions, then (<i>x</i>*,&nbsp;<i>y</i>*) is a solution of the problem.
 <p>
-The Kuhn-Tucker conditions are
+Let <i>M</i>(<i>x</i>,&nbsp;<i>y</i>)&nbsp;= <i>x</i><sup>2</sup><i>y</i><sup>2</sup>&nbsp;− λ(2<i>x</i>&nbsp;+ <i>y</i>&nbsp;− 2).  The KT conditions are
 </p><div class="equation">
   <table class="mathAlign">
     <tbody><tr>
-      <td class="alignRight">1&nbsp;− 2λ<sub>1</sub><i>x</i>&nbsp;+ λ<sub>2</sub> </td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2">0</td>
+      <td class="alignRight">2<i>x</i><i>y</i><sup>2</sup>&nbsp;− 2λ ≤&nbsp;0, <i>x</i>&nbsp;≥ 0, and <i>x</i>[2<i>x</i><i>y</i><sup>2</sup>&nbsp;− 2λ]&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2">&nbsp;0</td>
 </tr>
  <tr>
   <td class="alignRight">
-<i>a</i>&nbsp;− 2λ<sub>1</sub><i>y</i>&nbsp;+ λ<sub>2</sub> </td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2">0</td>
+2<i>x</i><sup>2</sup><i>y</i>&nbsp;− λ ≤&nbsp;0, <i>y</i>&nbsp;≥ 0, and <i>y</i>[2<i>x</i><sup>2</sup><i>y</i>&nbsp;− λ]&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2">&nbsp;0</td>
 </tr>
  <tr>
   <td class="alignRight">
-λ<sub>1</sub>&nbsp;≥ 0, <i>x</i><sup>2</sup>&nbsp;+ <i>y</i><sup>2</sup></td>
-      <td class="mathAlign2">&nbsp;≤&nbsp;</td>
-      <td class="mathAlign2">1, and λ<sub>1</sub>(<i>x</i><sup>2</sup>&nbsp;+ <i>y</i><sup>2</sup>&nbsp;− 1)&nbsp;= 0</td>
-</tr>
- <tr>
-  <td class="alignRight">
-λ<sub>2</sub>&nbsp;≥ 0, <i>x</i>&nbsp;+ <i>y</i></td>
-      <td class="mathAlign2">&nbsp;≥&nbsp;</td>
-      <td class="mathAlign2">0, and λ<sub>2</sub>(<i>x</i>&nbsp;+ <i>y</i>)&nbsp;= 0</td>
+λ&nbsp;≥ 0, 2<i>x</i>&nbsp;+ <i>y</i>&nbsp;≤ 2, and λ(2<i>x</i>&nbsp;+ <i>y</i>&nbsp;− 2)&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2">&nbsp;0</td>
 </tr>
 </tbody></table></div>
-
-From the first condition, we have λ<sub>1</sub> &gt; 0 (otherwise λ<sub>2</sub>&nbsp;= −1).  Thus <i>x</i><sup>2</sup>&nbsp;+ <i>y</i><sup>2</sup>&nbsp;= 1.  Now consider the two cases for the value of λ<sub>2</sub>.
-<p>
-If λ<sub>2</sub>&nbsp;= 0, we have <i>x</i>&nbsp;= 1/(2λ<sub>1</sub>) and <i>y</i>&nbsp;= <i>a</i>/(2λ<sub>1</sub>) from the first two conditions, so that λ<sub>1</sub>&nbsp;= (1/2)√(1&nbsp;+ <i>a</i><sup>2</sup>) (using  <i>x</i><sup>2</sup>&nbsp;+ <i>y</i><sup>2</sup>&nbsp;= 1).  Thus (<i>x</i>,&nbsp;<i>y</i>)&nbsp;= (1/√(1&nbsp;+
-<i>a</i><sup>2</sup>),&nbsp;<i>a</i>/√(1&nbsp;+ <i>a</i><sup>2</sup>)).  For this pair to satisfy the constraint <i>x</i>&nbsp;+ <i>y</i>&nbsp;≥ 0 we need <i>a</i>&nbsp;≥ −1.
-</p><p>
-If λ<sub>2</sub> &gt; 0, we have <i>x</i>&nbsp;+ <i>y</i>&nbsp;= 0, so that from <i>x</i><sup>2</sup>&nbsp;+ <i>y</i><sup>2</sup>&nbsp;= 1 we have (<i>x</i>,&nbsp;<i>y</i>)&nbsp;= (1/√2,&nbsp;−1/√2) or (<i>x</i>,&nbsp;<i>y</i>)&nbsp;= (−1/√2,&nbsp;1/√2).  From the first two Kuhn-Tucker conditions we have λ<sub>1</sub>&nbsp;= (1&nbsp;−
-<i>a</i>)/(2(<i>x</i>&nbsp;− <i>y</i>)).  Thus for (<i>x</i>,&nbsp;<i>y</i>)&nbsp;= (1/√2,&nbsp;−1/√2) we have λ<sub>1</sub>&nbsp;= (1&nbsp;− <i>a</i>)√2/4 and hence λ<sub>2</sub>&nbsp;= −(1&nbsp;+ <i>a</i>)/2, which are both nonnegative if and only if <i>a</i>&nbsp;≤ −1.  For (<i>x</i>,&nbsp;<i>y</i>)&nbsp;=
-(−1/√2,&nbsp;1/√2) we have λ<sub>1</sub>&nbsp;= −(1&nbsp;− <i>a</i>)√2/4 and hence λ<sub>2</sub>&nbsp;= −(1&nbsp;+ <i>a</i>)/2, which are not both nonnegative for any value of <i>a</i>.
-</p><p>
-We conclude that if <i>a</i>&nbsp;≥ −1 the solution of the problem is (1/√(1&nbsp;+ <i>a</i><sup>2</sup>),&nbsp;<i>a</i>/√(1&nbsp;+ <i>a</i><sup>2</sup>)), with λ<sub>1</sub>&nbsp;= (1/2)√(1&nbsp;+ <i>a</i><sup>2</sup>) and λ<sub>2</sub>&nbsp;= 0, and if <i>a</i>&nbsp;&lt; −1 the solution is (1/√2,&nbsp;−1/√2), with
-λ<sub>1</sub>&nbsp;= (1&nbsp;− <i>a</i>)√2/4 and λ<sub>2</sub>&nbsp;= −(1&nbsp;+ <i>a</i>)/2.
-</p></div>
-</li><li>Consider the following problem.
-<div class="equation">max<sub><i>x</i></sub>−<i>x</i><span class="supsub">2<br>1</span>&nbsp;− <i>x</i><sub>1</sub><i>x</i><sub>2</sub>&nbsp;− <i>x</i><span class="supsub">2<br>2</span> subject to <i>x</i><sub>1</sub>&nbsp;− 2<i>x</i><sub>2</sub>&nbsp;≤ −1 and 2<i>x</i><sub>1</sub>&nbsp;+ <i>x</i><sub>2</sub>&nbsp;≤ 2</div>
+Consider each possibility for the solutions of the first two sets of conditions:
+<ul>
+   <li><i>x</i>&nbsp;= 0, <i>y</i>&nbsp;= 0: in this case we need λ&nbsp;= 0 from the third set of conditions
+   </li><li><i>x</i>&nbsp;= 0, <i>y</i> &gt; 0: from the second set of conditions we have λ&nbsp;= 0.
+   </li><li><i>x</i> &gt; 0, <i>y</i>&nbsp;= 0: from the first set of conditions we have λ&nbsp;= 0
+   </li><li><i>x</i> &gt; 0, <i>y</i> &gt; 0: from the first two sets of conditions we have <i>x</i><i>y</i><sup>2</sup>&nbsp;= λ and 2<i>x</i><sup>2</sup><i>y</i>&nbsp;= λ, so that 2<i>x</i>&nbsp;= <i>y</i> and λ &gt; 0.  From the third set of conditions we thus have <i>y</i>&nbsp;= 1, and hence <i>x</i>&nbsp;= 1/2.
+</li></ul>
+The value of the objective function at solutions in the first three cases is 0, and the value in the last case is 1/4.  Thus the solution of the problem is (<i>x</i>,&nbsp;<i>y</i>)&nbsp;= (1/2,&nbsp;1).
+</div>
+</li><li>Consider the problem
+<div class="equation">max<sub><i>x</i></sub><i style="padding-right:0.2em;">f</i>(<i>x</i>) subject to <i>g</i><sub><i>j</i></sub>(<i>x</i>)&nbsp;≤ <i>c</i><sub><i>j</i></sub> for <i>j</i>&nbsp;= 1,&nbsp;..., <i>m</i> and <i>x</i><sub><i>i</i></sub>&nbsp;≥ 0 for <i>i</i>&nbsp;= 1,&nbsp;..., <i>n</i>.</div>
 <ol type="a">
-<li>Are the Kuhn-Tucker conditions necessary for a solution of this problem?
-</li><li>Are the Kuhn-Tucker conditions sufficient for a solution of this problem?
-</li><li>If possible, use the Kuhn-Tucker conditions to find the solution(s) of the problem.
+<li>Write down the Kuhn-Tucker conditions for this problem when it is written in the form
+<div class="equation">max<sub><i>x</i></sub><i style="padding-right:0.2em;">f</i>(<i>x</i>) subject to <i>g</i><sub><i>j</i></sub>(<i>x</i>)&nbsp;≤ <i>c</i><sub><i>j</i></sub> for <i>j</i>&nbsp;= 1,&nbsp;..., <i>m</i>+<i>n</i></div>
+where <i>g</i><sub><i>m</i>+<i>i</i></sub>(<i>x</i>)&nbsp;= −<i>x</i><sub><i>i</i></sub> for <i>i</i>&nbsp;= 1,&nbsp;...,&nbsp;<i>n</i>.  (Write the derivative of the Lagrangean explicitly in terms of the derivatives of <i style="padding-right:0.2em;">f</i> and <i>g</i><sub><i>j</i></sub> for <i>j</i>&nbsp;= 1,&nbsp;..., <i>m</i>, using the notation
+(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>) for the derivative of <i>g</i><sub><i>j</i></sub> with respect to <i>x</i><sub><i>i</i></sub> at <i>x</i>.  Denote the Lagrange multiplier associated with the constraint <i>g</i><sub><i>k</i></sub>(<i>x</i>)&nbsp;≤ <i>c</i><sub><i>j</i></sub> by λ<sub><i>j</i></sub> for <i>j</i>&nbsp;= 1,&nbsp;...,
+<i>m</i> and the multiplier associated with the constraint <i>g</i><sub><i>m</i>+<i>i</i></sub>(<i>x</i>)&nbsp;≤ 0 by λ<sub><i>m</i>+<i>i</i></sub> for <i>i</i>&nbsp;= 1,&nbsp;..., <i>n</i>.)
+</li><li>Write down the <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/nnc/NNC#KT">Kuhn-Tucker conditions tailored to problems with nonnegativity constraints</a>.
+</li><li>Show that if (<i>x</i>,&nbsp;(λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>m</i>+<i>n</i></sub>)) satisfies the conditions in (a) then (<i>x</i>,&nbsp;(λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>m</i></sub>)) satisfies the conditions in (b), and if (<i>x</i>,&nbsp;(λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>m</i></sub>)) satisfies the conditions in (b) then there exist numbers
+λ<sub><i>m</i>+1</sub>,&nbsp;..., λ<sub><i>m</i>+<i>n</i></sub> such that (<i>x</i>,&nbsp;(λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>m</i>+<i>n</i></sub>)) satisfies the conditions in (a).
 </li></ol>
 <p>
 <a class="action" href="javascript:toggleSolution(2)">Solution</a></p><div class="solution" id="2" style="display: block;">
 <ol type="a">
-<li>Yes: since each <i>g</i><sub><i>j</i></sub> is concave.
-</li><li>Yes, since <i style="padding-right:0.2em;">f</i> is concave and each <i>g</i><sub><i>j</i></sub> is convex.
+<li>The Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;− ∑<span class="supsub"><i>m</i><br><i>j</i>=1</span>λ<sub><i>j</i></sub>(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>)&nbsp;+ λ<sub><i>m</i>+<i>i</i></sub>&nbsp;=
+0 for <i>i</i>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 1,&nbsp;...,&nbsp;<i>n</i></td>
+</tr>
+ <tr>
+  <td class="alignRight">
+λ<sub><i>j</i></sub>&nbsp;≥ 0, <i>g</i><sub><i>j</i></sub>(<i>x</i>)&nbsp;≤ <i>c</i><sub><i>j</i></sub>, λ<sub><i>j</i></sub>[<i>g</i><sub><i>j</i></sub>(<i>x</i>)&nbsp;− <i>c</i><sub><i>j</i></sub>]&nbsp;= 0 for <i>j</i>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 1,&nbsp;...,&nbsp;<i>m</i></td>
+</tr>
+
+<tr>
+  <td class="alignRight">
+λ<sub><i>m</i>+<i>i</i></sub>&nbsp;≥ 0, <i>x</i><sub><i>i</i></sub>&nbsp;≥ 0, λ<sub><i>m</i>+<i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;= 0 for <i>i</i>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 1,&nbsp;...,&nbsp;<i>n</i>.</td>
+</tr>
+</tbody></table></div>
+
 </li><li>The Kuhn-Tucker conditions are
 <div class="equation">
   <table class="mathAlign">
     <tbody><tr>
-      <td class="alignRight">−2<i>x</i><sub>1</sub>&nbsp;− <i>x</i><sub>2</sub>&nbsp;− λ<sub>1</sub>&nbsp;− 2λ<sub>2</sub></td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2">0</td>
+      <td class="alignRight"><i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;− ∑<span class="supsub"><i>m</i><br><i>j</i>=1</span> λ<sub><i>j</i></sub>(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>)&nbsp;≤ 0,
+<i>x</i><sub><i>i</i></sub>&nbsp;≥ 0, <i>x</i><sub><i>i</i></sub>·[<i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;− ∑<span class="supsub"><i>m</i><br><i>j</i>=1</span>λ<sub><i>j</i></sub>(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>)]&nbsp;= 0 for
+<i>i</i>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 1,...,<i>n</i></td>
 </tr>
  <tr>
   <td class="alignRight">
-−<i>x</i><sub>1</sub>&nbsp;− 2<i>x</i><sub>2</sub>&nbsp;+ 2λ<sub>1</sub>&nbsp;− λ<sub>2</sub></td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2">0</td>
+λ<sub><i>j</i></sub>&nbsp;≥ 0, <i>g</i><sub><i>j</i></sub>(<i>x</i>)&nbsp;≤ <i>c</i><sub><i>j</i></sub>, and λ<sub><i>j</i></sub>·[<i>c</i><sub><i>j</i></sub>&nbsp;− <i>g</i><sub><i>j</i></sub>(<i>x</i>)]&nbsp;= 0 for <i>j</i>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 1,...,<i>m</i>.</td>
+</tr>
+</tbody></table></div>
+
+</li><li>First suppose that (<i>x</i>,&nbsp;(λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>m</i>+<i>n</i></sub>)) satisfies the conditions in (a).  Then since λ<sub><i>j</i></sub>&nbsp;≥ 0 for all <i>j</i> we have
+<div class="equation"><i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;− ∑<span class="supsub"><i>m</i><br><i>j</i>=1</span> λ<sub><i>j</i></sub>(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>)&nbsp;≤ 0</div>
+from the first condition.  Further, if <i>x</i><sub><i>i</i></sub>&nbsp;&gt; 0 then by the last condition we have λ<sub><i>m</i>+<i>i</i></sub>&nbsp;= 0, so that from the first condition we have
+<div class="equation"><i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;− ∑<span class="supsub"><i>m</i><br><i>j</i>=1</span>λ<sub><i>j</i></sub>(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>)&nbsp;= 0.</div>
+Hence we have
+<div class="equation"><i>x</i><sub><i>i</i></sub>·[<i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;− ∑<span class="supsub"><i>m</i><br><i>j</i>=1</span>λ<sub><i>j</i></sub>(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>)]&nbsp;= 0.</div>
+Thus the conditions in (b) are satisfied.
+<p>
+Now suppose that (<i>x</i>,&nbsp;(λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>m</i></sub>)) satisfies the conditions in (b).  Define
+</p><div class="equation">λ<sub><i>m</i>+<i>i</i></sub>&nbsp;= −[<i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;− ∑<span class="supsub"><i>m</i><br><i>j</i>=1</span>λ<sub><i>j</i></sub>(∂<i>g</i><sub><i>j</i></sub>/∂<i>x</i><sub><i>i</i></sub>)(<i>x</i>)] for all <i>i</i>&nbsp;= 1,&nbsp;...,&nbsp;<i>n</i>.</div>
+By the second condition in (b) we have <i>x</i><sub><i>i</i></sub>&nbsp;= 0 if λ<sub><i>m</i>+<i>i</i></sub>&nbsp;&gt; 0, so λ<sub><i>m</i>+<i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;= 0 for all <i>i</i>.  Hence (<i>x</i>,&nbsp;(λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>m</i>+<i>n</i></sub>)) satisfies the conditions in (a).
+</li></ol>
+</div>
+</li><li>Consider the following problem.
+<div class="equation">max<sub><i>x</i></sub>−(<i>x</i><sub>1</sub>−<i>c</i><sub>1</sub>)<sup>2</sup>&nbsp;− (<i>x</i><sub>2</sub>&nbsp;− <i>c</i><sub>2</sub>)<sup>2</sup> subject to (<i>x</i><sub>1</sub>&nbsp;+ 1)<sup>2</sup>&nbsp;+ <i>x</i><span class="supsub">2<br>2</span>&nbsp;≤ 4, <i>x</i><sub>1</sub>&nbsp;≥ 0, and <i>x</i><sub>2</sub>&nbsp;≥ 0,</div>
+where <i>c</i><sub>1</sub> and <i>c</i><sub>2</sub> are constants.
+<ol type="a">
+<li>Are the Kuhn-Tucker conditions necessary for a solution of this problem?
+</li><li>Are the Kuhn-Tucker conditions sufficient for a solution of this problem?
+</li><li>If possible, use the Kuhn-Tucker conditions to find the solution(s) of the problem for <i>c</i><sub>1</sub>&nbsp;= −1 and <i>c</i><sub>2</sub>&nbsp;= 3.
+</li><li>If possible, use the Kuhn-Tucker conditions to find the solution(s) of the problem for <i>c</i><sub>1</sub>&nbsp;= <i>c</i><sub>2</sub>&nbsp;= 0.
+</li><li>If possible, use the Kuhn-Tucker conditions to find the solution(s) of the problem for <i>c</i><sub>1</sub>&nbsp;= 2 and <i>c</i><sub>2</sub>&nbsp;= 0.
+</li></ol>
+<p>
+<a class="action" href="javascript:toggleSolution(3)">Solution</a></p><div class="solution" id="3" style="display: block;">
+<ol type="a">
+<li>The function <i>g</i><sub>1</sub> is convex; the remaining two constraints are also convex (and concave).  Finally, there exists a point that satisfies all the constraints strictly (e.g. (1/2,&nbsp;1/2)).  Thus the Kuhn-Tucker conditions are necessary for a solution to the problem.
+</li><li>Since <i style="padding-right:0.2em;">f</i> is concave and each <i>g</i><sub><i>j</i></sub> is convex, the Kuhn-Tucker conditions are sufficient for a solution of the problem.
+</li><li>The Lagrangean is
+<div class="equation"><i>M</i>(<i>x</i><sub>1</sub>,&nbsp;<i>x</i><sub>2</sub>)&nbsp;= −(<i>x</i><sub>1</sub>−<i>c</i><sub>1</sub>)<sup>2</sup>&nbsp;− (<i>x</i><sub>2</sub>&nbsp;− <i>c</i><sub>2</sub>)<sup>2</sup>&nbsp;− λ[(<i>x</i><sub>1</sub>&nbsp;+ 1)<sup>2</sup>&nbsp;+ <i>x</i><span class="supsub">2<br>2</span>&nbsp;− 4].</div>
+The Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight">−2(<i>x</i><sub>1</sub>&nbsp;+ 1)&nbsp;− 2λ(<i>x</i><sub>1</sub>&nbsp;+ 1)&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 0, <i>x</i><sub>1</sub>&nbsp;≥ 0, and <i>x</i><sub>1</sub>·[−2(<i>x</i><sub>1</sub>&nbsp;+ 1)&nbsp;−
+2λ(<i>x</i><sub>1</sub>&nbsp;+ 1)]&nbsp;= 0</td>
 </tr>
  <tr>
   <td class="alignRight">
-λ<sub>1</sub>&nbsp;≥ 0, <i>x</i><sub>1</sub>&nbsp;− 2<i>x</i><sub>2</sub></td>
-      <td class="mathAlign2">&nbsp;≤&nbsp;</td>
-      <td class="mathAlign2">−1, and λ<sub>1</sub>(<i>x</i><sub>1</sub>&nbsp;− 2<i>x</i><sub>2</sub>&nbsp;+ 1)&nbsp;= 0</td>
+−2(<i>x</i><sub>2</sub>&nbsp;− 3)&nbsp;− 2λ<i>x</i><sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 0, <i>x</i><sub>2</sub>&nbsp;≥ 0, and <i>x</i><sub>2</sub>·[−2(<i>x</i><sub>2</sub>&nbsp;− 3)&nbsp;− 2λ<i>x</i><sub>2</sub>]&nbsp;= 0</td>
 </tr>
  <tr>
   <td class="alignRight">
-λ<sub>2</sub>&nbsp;≥ 0, 2<i>x</i><sub>1</sub>&nbsp;+ <i>x</i><sub>2</sub></td>
-      <td class="mathAlign2">&nbsp;≤&nbsp;</td>
-      <td class="mathAlign2">2, and λ<sub>2</sub>(2<i>x</i><sub>1</sub>&nbsp;+ <i>x</i><sub>2</sub>&nbsp;− 2)&nbsp;= 0</td>
+(<i>x</i><sub>1</sub>&nbsp;+ 1)<sup>2</sup>&nbsp;+ <i>x</i><span class="supsub">2<br>2</span>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 4, λ&nbsp;≥ 0, and λ·[4&nbsp;− (<i>x</i><sub>1</sub>&nbsp;+ 1)<sup>2</sup>&nbsp;− <i>x</i><span class="supsub">2<br>2</span>]&nbsp;= 0</td>
+</tr>
+</tbody></table></div>
+The unique solution of these conditions is <i>x</i><sub>1</sub>&nbsp;= 0, <i>x</i><sub>2</sub>&nbsp;= √3, λ&nbsp;= √3&nbsp;− 1.  Thus a solution of the problem (in fact the only solution, as one can see from a diagram) is (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (0,&nbsp;√3).
+</li><li>In this case the unique solution of the Kuhn-Tucker conditions has (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (0,&nbsp;0), so this is a solution of the problem.  (λ is zero in this case.)
+</li><li>In this case the unique solution of the Kuhn-Tucker conditions has (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (1,&nbsp;0), so this is a solution of the problem.  (λ is positive in this case.)
+</li></ol>
+</div>
+</li><li>Let <i>u</i> be a quasiconcave, increasing function of <i>n</i> variables.  (Increasing means <i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>)&nbsp;&gt; 0 for all <i>i</i>.)  Let <i>w</i>&nbsp;&gt; 0 be a number and let <i>p</i>&nbsp;= (<i>p</i><sub>1</sub>, ..., <i>p</i><sub><i>n</i></sub>) be a vector with <i>p</i><sub><i>i</i></sub>&nbsp;&gt; 0 for all <i>i</i>.  Consider the problem
+<div class="equation">max<sub><i>x</i></sub><i>u</i>(<i>x</i>) subject to ∑<span class="supsub"><i>n</i><br><i>i</i>=1</span><i>p</i><sub><i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;≤ <i>w</i> and <i>x</i>&nbsp;≥ 0.</div>
+<ol type="a">
+<li>Write down the Kuhn-Tucker conditions for this problem.
+</li><li>Suppose that <i>x</i>* solves the problem.  Is there necessarily a value of λ* such that (<i>x</i>*,λ*) satisfies the Kuhn-Tucker conditions?
+</li><li>Suppose that (<i>x</i>*,λ*) satisfies the Kuhn-Tucker conditions.  Does <i>x</i>* necessarily solve the problem?
+</li><li>Suppose that <i>x</i>* solves the problem.  What can you say about the relationship between <i>p</i><sub><i>i</i></sub>/<i>p</i><sub><i>j</i></sub> and the value of <i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)/<i>u</i>'<sub class="prime"><i>j</i></sub>(<i>x</i>*)
+when
+<ol type="i">
+<li><i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;&gt; 0 and <i>x</i>*<sub class="star"><i>j</i></sub>&nbsp;&gt; 0?
+</li><li><i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;= 0 and <i>x</i>*<sub class="star"><i>j</i></sub>&nbsp;&gt; 0?
+</li><li><i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;= 0 and <i>x</i>*<sub class="star"><i>j</i></sub>&nbsp;= 0?
+</li></ol>
+</li></ol>
+<p>
+<a class="action" href="javascript:toggleSolution(4)">Solution</a></p><div class="solution" id="4" style="display: block;">
+<ol type="a">
+<li>The Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)&nbsp;− λ*<i>p</i><sub><i>i</i></sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 0, <i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;≥ 0, and
+<i>x</i><sub><i>i</i></sub>·(<i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)&nbsp;− λ*<i>p</i><sub><i>i</i></sub>)&nbsp;= 0, <i>i</i>&nbsp;= 1,...,<i>n</i></td>
+</tr>
+ <tr>
+  <td class="alignRight">
+∑<span class="supsub"><i>n</i><br><i>i</i>=1</span><i>p</i><sub><i>i</i></sub><i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;≤ <i>w</i>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 0, λ*&nbsp;≥ 0, and λ*·(<i>w</i>&nbsp;−
+∑<span class="supsub"><i>n</i><br><i>i</i>=1</span><i>p</i><sub><i>i</i></sub><i>x</i>*<sub class="star"><i>i</i></sub>)&nbsp;= 0</td>
 </tr>
 </tbody></table></div>
 <p>
-Consider the possible cases in turn:
+</p></li><li>The constraint function is linear, hence concave.  Thus if <i>x</i>* solves the problem then there is a number λ* such that (<i>x</i>*,&nbsp;λ*) solves the Kuhn-Tucker conditions.
+</li><li>The objective function is quasiconcave and increasing (so that there is no point at which ∇<i>u</i>(<i>x</i>)&nbsp;= (0,...,0)) and the constraint function is linear, hence quasiconvex.  Thus if (<i>x</i>*,&nbsp;λ*) satisfies the Kuhn-Tucker conditions then <i>x</i>* solves the problem.
+</li><li><ol type="i">
+<li>If <i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;&gt; 0 and <i>x</i>*<sub class="star"><i>j</i></sub>&nbsp;&gt; 0 then from the Kuhn-Tucker conditions we have
+<div class="equation"><i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)/<i>u</i>'<sub class="prime"><i>j</i></sub>(<i>x</i>*)&nbsp;= <i>p</i><sub><i>i</i></sub>/<i>p</i><sub><i>j</i></sub>.</div>
+</li><li>If <i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;= 0 and <i>x</i>*<sub class="star"><i>j</i></sub>&nbsp;&gt; 0 then from the Kuhn-Tucker conditions we have <i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)&nbsp;≤ λ*<i>p</i><sub><i>i</i></sub> and <i>u</i>'<sub class="prime"><i>j</i></sub>(<i>x</i>*)&nbsp;= λ*<i>p</i><sub><i>j</i></sub>, so
+<div class="equation"><i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)/<i>u</i>'<sub class="prime"><i>j</i></sub>(<i>x</i>*)&nbsp;≤ <i>p</i><sub><i>i</i></sub>/<i>p</i><sub><i>j</i></sub>.</div>
+</li><li>If <i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;= 0 and <i>x</i>*<sub class="star"><i>j</i></sub>&nbsp;= 0 then from the Kuhn-Tucker conditions we have <i>u</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)&nbsp;≤ λ*<i>p</i><sub><i>i</i></sub> and <i>u</i>'<sub class="prime"><i>j</i></sub>(<i>x</i>*)&nbsp;≤ λ*<i>p</i><sub><i>j</i></sub>, so we can say nothing about the
+relationship of the ratio of the partials of <i>u</i> and <i>p</i><sub><i>i</i></sub>/<i>p</i><sub><i>j</i></sub>.
+</li></ol>
+</li></ol>
+</div>
+</li><li>Consider the problem
+<div class="equation">max<sub><i>x</i>,<i>y</i></sub>3<i>x</i>&nbsp;+ <i>y</i> subject to (<i>x</i>&nbsp;+ 1)<sup>2</sup>&nbsp;+ (<i>y</i>&nbsp;+ 1)<sup>2</sup>&nbsp;≤ 5, <i>x</i>&nbsp;≥ 0, and <i>y</i>&nbsp;≥ 0.</div>
+<ol type="a">
+<li>Suppose that (<i>x</i>*,&nbsp;<i>y</i>*) solves this problem.  Is there necessarily a value of λ* such that (<i>x</i>*,&nbsp;<i>y</i>*,&nbsp;λ*) satisfies the Kuhn-Tucker conditions?
+</li><li>Now suppose that (<i>x</i>*,&nbsp;<i>y</i>*,&nbsp;λ*) satisfies the Kuhn-Tucker conditions.  Does (<i>x</i>*,&nbsp;<i>y</i>*) necessarily solve the problem?
+</li><li>Given the information in your answers to (a) and (b), use the Kuhn-Tucker method to solve the problem.  (You may use a graph to get some idea of what the solution might be; but use the Kuhn-Tucker conditions to find the solution exactly and justify it.)
+</li></ol>
+<p>
+<a class="action" href="javascript:toggleSolution(5)">Solution</a></p><div class="solution" id="5" style="display: block;">
+<ol type="a">
+<li>The constraint function is convex (its Hessian is
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight">
+    <table class="matrix">
+      <tbody><tr>
+        <td class="delimiterLeft" rowspan="2"><img alt="left parenthesis" src="./index_files/lparen2.gif"></td>
+ <td class="cell">2</td>
+  <td class="cell">0</td>
+  <td class="delimiterRight" rowspan="2"><img alt="right parenthesis" src="./index_files/rparen2.gif"></td>
+</tr>
+
+<tr>
+  <td class="cell">0</td>
+  <td class="cell">2</td>
+</tr>
+</tbody></table></td>
+      <td class="mathAlign2">)</td>
+</tr>
+</tbody></table></div>
+and there exists (<i>x</i>,&nbsp;<i>y</i>)&nbsp;≥ (0,&nbsp;0) such that <i>g</i>(<i>x</i>,&nbsp;<i>y</i>)&nbsp;&lt; <i>c</i>, so the Kuhn-Tucker conditions are necessary.
+</li><li>The objective function is concave and the constraint function is convex, so the Kuhn-Tucker conditions are sufficient.
+</li><li>The Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight">3&nbsp;− 2(<i>x</i>&nbsp;+ 1)λ&nbsp;≤ 0, with equality if <i>x</i>&nbsp;&gt; 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+1&nbsp;− 2(<i>y</i>&nbsp;+ 1)λ&nbsp;≤ 0, with equality if <i>y</i>&nbsp;&gt; 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+(<i>x</i>&nbsp;+ 1)<sup>2</sup>&nbsp;+ (<i>y</i>&nbsp;+ 1)<sup>2</sup>&nbsp;≤ 5 and λ(5&nbsp;− (<i>x</i>&nbsp;+ 1)<sup>2</sup>&nbsp;− (<i>y</i>&nbsp;+ 1)<sup>2</sup>)&nbsp;= 0</td>
+</tr>
+</tbody></table></div>
+The unique solution of these conditions is (<i>x</i>,<i>y</i>,λ)&nbsp;= (1,&nbsp;0,&nbsp;3/4).  Thus (<i>x</i>,&nbsp;<i>y</i>)&nbsp;= (1,&nbsp;0) is the solution of the problem.
+</li></ol>
+</div>
+</li><li>A firm produces in each of <i>n</i> periods.  In any period&nbsp;<i>i</i> its output is <i>x</i><sub><i>i</i></sub> and the price of output is <i>p</i><sub><i>i</i></sub> (which is fixed, but varies between periods).  If it chooses the capacity <i>k</i>, then its output in each period is at most <i>k</i>.  The cost of maintaining the capacity <i>k</i> is <i>D</i>(<i>k</i>), where <i>D</i> is
+convex, and the cost of producing the vector of outputs <i>x</i>&nbsp;= (<i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub>) is <i>C</i>(<i>x</i>), where <i>C</i> is convex.  Thus the firm's problem is
+<div class="equation">max<sub><i>x</i>,<i>k</i></sub>(∑<span class="supsub"><i>n</i><br><i>i</i>=1</span><i>p</i><sub><i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;− <i>C</i>(<i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub>)&nbsp;− <i>D</i>(<i>k</i>)) subject to 0&nbsp;≤ <i>x</i><sub><i>i</i></sub>&nbsp;≤ <i>k</i> for <i>i</i>&nbsp;=
+1,&nbsp;...,&nbsp;<i>n</i>.</div>
+(Note that the firm chooses <i>both</i> the vector <i>x</i> <i>and</i> the number <i>k</i>, and that one constraint is <i>k</i>&nbsp;≥ 0.)
+<ol type="a">
+<li>Write down the Kuhn-Tucker conditions (either variety) for this problem.
+</li><li>What is the relation between the solutions of the Kuhn-Tucker conditions and the solutions of the problem?  (You may use the result in a <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/nnc/CVNX1#CDconvex">previous problem</a>.)
+</li><li>Consider the case in which <i>C</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= <i>x</i><span class="supsub">2<br>1</span>&nbsp;+ <i>x</i><span class="supsub">2<br>2</span>, <i>D</i>(<i>k</i>)&nbsp;= <i>k</i><sup>2</sup> (both of which are convex), <i>p</i><sub>1</sub>&nbsp;= 1, and <i>p</i><sub>2</sub>&nbsp;= 3.
+<p>
+Is there a solution in which <i>x</i><sub>1</sub>&nbsp;= <i>x</i><sub>2</sub>&nbsp;= <i>k</i>&nbsp;&gt; 0?
 </p><p>
-λ<sub>1</sub>&nbsp;= λ<sub>2</sub>&nbsp;= 0: From the first two equations we have <i>x</i><sub>1</sub>&nbsp;= <i>x</i><sub>2</sub>&nbsp;= 0, which violates the first constraint.
+Is there a solution in which 0&nbsp;&lt; <i>x</i><sub>1</sub>&nbsp;&lt; <i>k</i>&nbsp;= <i>x</i><sub>2</sub>?
 </p><p>
-λ<sub>1</sub>&nbsp;&gt; 0 and λ<sub>2</sub>&nbsp;&gt; 0, so that <i>x</i><sub>1</sub>&nbsp;− 2<i>x</i><sub>2</sub>&nbsp;= −1 and 2<i>x</i><sub>1</sub>&nbsp;+ <i>x</i><sub>2</sub>&nbsp;= 2: We have <i>x</i><sub>1</sub>&nbsp;= 3/5 and <i>x</i><sub>2</sub>&nbsp;= 4/5, which do not satisfy the first first-order condition.
+</p></li></ol>
+<p>
+<a class="action" href="javascript:toggleSolution(6)">Solution</a></p><div class="solution" id="6" style="display: block;">
+<ol type="a">
+<li>You write the Lagrangean either as
+<div class="equation"><i>M</i>(<i>x</i>,<i>k</i>)&nbsp;= ∑<span class="supsub"><i>n</i><br><i>i</i>=1</span><i>p</i><sub><i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;− <i>C</i>(<i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub>)&nbsp;− <i>D</i>(<i>k</i>)&nbsp;−
+∑<span class="supsub"><i>n</i><br><i>i</i>=1</span>λ<sub><i>i</i></sub>(<i>x</i><sub><i>i</i></sub>&nbsp;− <i>k</i>),</div>
+in which case the Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"></td>
+      <td class="mathAlign2"><i>p</i><sub><i>i</i></sub>&nbsp;− <i>C</i>'<sub class="prime"><i>i</i></sub>(<i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub>)&nbsp;− λ<sub><i>i</i></sub>&nbsp;≤ 0, <i>x</i><sub><i>i</i></sub>&nbsp;≥ 0, and</td>
+</tr>
+
+<tr>
+  <td class="alignRight">
+</td>
+      <td class="mathAlign2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>x</i><sub><i>i</i></sub>(<i>p</i><sub><i>i</i></sub>&nbsp;− <i>C</i>'<sub class="prime"><i>i</i></sub>(<i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub>)&nbsp;− λ<sub><i>i</i></sub>)&nbsp;= 0 for <i>i</i>&nbsp;= 1,...,<i>n</i></td>
+</tr>
+ <tr>
+  <td class="alignRight">
+</td>
+      <td class="mathAlign2">−<i>D</i>'(<i>k</i>)&nbsp;+ ∑<span class="supsub"><i>n</i><br><i>i</i>=1</span>λ<sub><i>i</i></sub>&nbsp;≤ 0, <i>k</i>&nbsp;≥ 0, and <i>k</i>(−<i>D</i>'(<i>k</i>)&nbsp;+ ∑<span class="supsub"><i>n</i><br><i>i</i>=1</span>λ<sub><i>i</i></sub>)&nbsp;= 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+</td>
+      <td class="mathAlign2">λ<sub><i>i</i></sub>&nbsp;≥ 0, <i>x</i><sub><i>i</i></sub>&nbsp;≤ <i>k</i>, and λ<sub><i>i</i></sub>(<i>x</i><sub><i>i</i></sub>&nbsp;− <i>k</i>)&nbsp;= 0 for <i>i</i>&nbsp;= 1,...,<i>n</i></td>
+</tr>
+</tbody></table></div>
+or as
+<div class="equation"><i>L</i>(<i>x</i>,<i>k</i>)&nbsp;= ∑<span class="supsub"><i>n</i><br><i>i</i>=1</span><i>p</i><sub><i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;− <i>C</i>(<i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub>)&nbsp;− <i>D</i>(<i>k</i>)&nbsp;−
+∑<span class="supsub"><i>n</i><br><i>i</i>=1</span>λ<sub><i>i</i></sub>(<i>x</i><sub><i>i</i></sub>&nbsp;− <i>k</i>)&nbsp;− ∑<span class="supsub"><i>n</i><br><i>i</i>=1</span>μ<sub><i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;− η<i>k</i>,</div>
+in which case the Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"></td>
+      <td class="mathAlign2"><i>p</i><sub><i>i</i></sub>&nbsp;− <i>C</i>'<sub class="prime"><i>i</i></sub>(<i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub>)&nbsp;− λ<sub><i>i</i></sub>&nbsp;− μ<sub><i>i</i></sub>&nbsp;= 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+</td>
+      <td class="mathAlign2">−<i>D</i>'(<i>k</i>)&nbsp;+ ∑<span class="supsub"><i>n</i><br><i>i</i>=1</span>λ<sub><i>i</i></sub>&nbsp;− η&nbsp;= 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+</td>
+      <td class="mathAlign2">λ<sub><i>i</i></sub>&nbsp;≥ 0, μ<sub><i>i</i></sub>&nbsp;≥ 0, η&nbsp;≥ 0 for <i>i</i>&nbsp;= 1,...,<i>n</i></td>
+</tr>
+ <tr>
+  <td class="alignRight">
+</td>
+      <td class="mathAlign2">λ<sub><i>i</i></sub>(<i>x</i><sub><i>i</i></sub>&nbsp;− <i>k</i>)&nbsp;= 0, μ<sub><i>i</i></sub><i>x</i><sub><i>i</i></sub>&nbsp;= 0, and η<i>k</i>&nbsp;= 0 for <i>i</i>&nbsp;= 1,...,<i>n</i></td>
+</tr>
+</tbody></table></div>
+</li><li>Each constraint function is concave, so the Kuhn-Tucker conditions are necessary.  Each constraint function is convex and the objective function is concave (by the result of question 2), so the Kuhn-Tucker conditions are sufficient.  That is, (<i>x</i>*,&nbsp;<i>k</i>*) solves the problem if and only if there exist λ<sub>1</sub>, ..., λ<sub><i>n</i></sub> such that
+((<i>x</i>*,&nbsp;<i>k</i>*),&nbsp;λ<sub>1</sub>,&nbsp;...,&nbsp;λ<sub><i>n</i></sub>) solves the Kuhn-Tucker conditions.
+</li><li>If <i>x</i><sub>1</sub>&nbsp;= <i>x</i><sub>2</sub>&nbsp;= <i>k</i>&nbsp;&gt; 0 then from the Kuhn-Tucker conditions we have
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight">1&nbsp;− 2<i>k</i>&nbsp;− λ<sub>1</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+3&nbsp;− 2<i>k</i>&nbsp;− λ<sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+−2<i>k</i>&nbsp;+ λ<sub>1</sub>&nbsp;+ λ<sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0.</td>
+</tr>
+</tbody></table></div>
+From the third equation we have −2<i>k</i>&nbsp;= −λ<sub>1</sub>&nbsp;− λ<sub>2</sub>, so the first two equations are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight">1&nbsp;− 2λ<sub>1</sub>&nbsp;− λ<sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+3&nbsp;− λ<sub>1</sub>&nbsp;− 2λ<sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0</td>
+</tr>
+</tbody></table></div>
+which imply that 3λ<sub>1</sub>&nbsp;= −1, contradicting λ<sub>1</sub>&nbsp;≥ 0.  Thus there is no solution in which <i>x</i><sub>1</sub>&nbsp;= <i>x</i><sub>2</sub>&nbsp;= <i>k</i>&nbsp;&gt; 0.
+<p>
+If 0&nbsp;&lt; <i>x</i><sub>1</sub>&nbsp;&lt; <i>k</i>&nbsp;= <i>x</i><sub>2</sub> then from the Kuhn-Tucker conditions we have λ<sub>1</sub>&nbsp;= 0 and
+</p><div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight">1&nbsp;− 2<i>x</i><sub>1</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+3&nbsp;− 2<i>k</i>&nbsp;− λ<sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+−2<i>k</i>&nbsp;+ λ<sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0.</td>
+</tr>
+</tbody></table></div>
+From the first equation we have <i>x</i><sub>1</sub>&nbsp;= 1/2.  From the second and  third equations we have <i>k</i>&nbsp;= 3/4 and λ<sub>2</sub>&nbsp;= 3/2.  Since λ<sub>2</sub>&nbsp;≥ 0,  these values satisfy all the conditions.  Thus a solution to the problem is (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>k</i>)&nbsp;= (1/2, 3/4,&nbsp;3/4).
+</li></ol>
+</div>
+</li><li>Consider the problem
+<div class="equation">max<sub>x<sub>1</sub>,x<sub>2</sub></sub><i style="padding-right:0.2em;">f</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) subject to <i>p</i><sub>1</sub><i>x</i><sub>1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i><sub>2</sub>&nbsp;≤ <i>c</i>, <i>x</i><sub>1</sub>&nbsp;≥ 0, and <i>x</i><sub>2</sub>&nbsp;≥ 0,</div>
+where the function <i style="padding-right:0.2em;">f</i> is differentiable and quasiconcave, <i>p</i><sub><i>i</i></sub>&nbsp;&gt; 0 for <i>i</i>&nbsp;= 1, 2, and <i>c</i>&nbsp;&gt; 0.
+<ol type="a">
+<li>Write down the Kuhn-Tucker conditions (either variety) for (<i>x</i>*<sub class="star">1</sub>, <i>x</i>*<sub class="star">2</sub>) to solve this problem.
+</li><li>If (<i>x</i>*<sub class="star">1</sub>, <i>x</i>*<sub class="star">2</sub>) solves the problem does it necessarily satisfy the Kuhn-Tucker conditions?
+</li><li>If (<i>x</i>*<sub class="star">1</sub>, <i>x</i>*<sub class="star">2</sub>) satisfies the Kuhn-Tucker conditions and the constraint does it necessarily solve the problem?
+</li><li>Let (<i>x</i>*<sub class="star">1</sub>(<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,<i>c</i>), <i>x</i>*<sub class="star">2</sub>(<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,<i>c</i>)) be the solution of the problem, as a function of the parameters; assume that at this solution the values of <i>x</i><sub><i>i</i></sub>* are both positive and the constraint is satisfied with equality.  Let the
+value of the Lagrange multiplier be λ*(<i>p</i><sub>1</sub>,&nbsp;<i>p</i><sub>2</sub>,&nbsp;<i>c</i>).  Define the function <i style="padding-right:0.2em;">f</i>* by <i style="padding-right:0.2em;">F</i>(<i>p</i><sub>1</sub>,&nbsp;<i>p</i><sub>2</sub>,&nbsp;<i>c</i>)&nbsp;=
+<i style="padding-right:0.2em;">f</i>(<i>x</i>*<sub class="star">1</sub>(<i>p</i><sub>1</sub>,&nbsp;<i>p</i><sub>2</sub>,&nbsp;<i>c</i>), <i>x</i>*<sub class="star">2</sub>(<i>p</i><sub>1</sub>,&nbsp;<i>p</i><sub>2</sub>,&nbsp;<i>c</i>)).  Use the envelope theorem to find <i style="padding-right:0.2em;">F</i>'<sub class="prime">1</sub>(<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,<i>c</i>) in terms
+of the parameters and functions of these parameters.
+</li><li>For <i style="padding-right:0.2em;">f</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= <i>x</i><sub>1</sub><i>x</i><span class="supsub">2<br>2</span>, which is quasiconcave (you do not need to show this), find the solution of the problem.
+</li></ol>
+<p>
+<a class="action" href="javascript:toggleSolution(8)">Solution</a></p><div class="solution" id="8" style="display: block;">
+<ol type="a">
+<li>The Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)&nbsp;− λ*<i>p</i><sub><i>i</i></sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 0, <i>x</i><sub><i>i</i></sub>*&nbsp;≥ 0, and
+<i>x</i><sub><i>i</i></sub>·(<i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)&nbsp;− λ*<i>p</i><sub><i>i</i></sub>)&nbsp;= 0, <i>i</i>&nbsp;= 1,2</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+<i>p</i><sub>1</sub><i>x</i>*<sub class="star">1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i>*<sub class="star">2</sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> <i>c</i>, λ*&nbsp;≥ 0, and λ*·(<i>c</i>&nbsp;− (<i>p</i><sub>1</sub><i>x</i>*<sub class="star">1</sub>&nbsp;+
+<i>p</i><sub>2</sub><i>x</i>*<sub class="star">2</sub>))&nbsp;= 0</td>
+</tr>
+</tbody></table></div>
+Or, alternatively,
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i style="padding-right:0.2em;">f</i>'<sub class="prime"><i>i</i></sub>(<i>x</i>*)&nbsp;− λ*<i>p</i><sub><i>i</i></sub>&nbsp;+ μ*<sub class="star"><i>i</i></sub>&nbsp;</td>
+      <td class="mathAlign2">=</td>
+      <td class="mathAlign2"> 0, <i>i</i>&nbsp;= 1,2</td>
+</tr>
+
+<tr>
+  <td class="alignRight">
+μ*<sub class="star"><i>i</i></sub>&nbsp;≥ 0, <i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;</td>
+      <td class="mathAlign2">≥</td>
+      <td class="mathAlign2"> 0, and μ*<sub class="star"><i>i</i></sub><i>x</i>*<sub class="star"><i>i</i></sub>&nbsp;= 0 for <i>i</i>&nbsp;= 1, 2</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+<i>p</i><sub>1</sub><i>x</i>*<sub class="star">1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i>*<sub class="star">2</sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> <i>c</i>, λ*&nbsp;≥ 0, and λ*·(<i>p</i><sub>1</sub><i>x</i>*<sub class="star">1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i>*<sub class="star">2</sub>&nbsp;− <i>c</i>)&nbsp;=
+0</td>
+</tr>
+</tbody></table></div>
+</li><li>Each constraint function is concave (in fact, linear), so the Kuhn-Tucker conditions are necessary.
+</li><li>The objective function is quasiconcave and each constraint function is quasiconvex, so if ∇<i style="padding-right:0.2em;">f</i>(<i>x</i>*)&nbsp;≠ (0,0) and (<i>x</i>*<sub class="star">1</sub>, <i>x</i>*<sub class="star">2</sub>) satisfies the Kuhn-Tucker conditions then <i>x</i>* solves the problem.
+</li><li>By the envelope theorem, <i style="padding-right:0.2em;">F</i>'<sub class="prime">1</sub>(<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,<i>c</i>) is the partial derivative of the Lagrangean with respect to <i>p</i><sub>1</sub> evaluated at (<i>x</i>*<sub class="star">1</sub>, <i>x</i>*<sub class="star">2</sub>,λ*).  Thus
+<i style="padding-right:0.2em;">F</i>'<sub class="prime">1</sub>(<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,<i>c</i>)&nbsp;= −λ*(<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,<i>c</i>)<i>x</i>*<sub class="star">1</sub>(<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,<i>c</i>).
+</li><li>In this case the Kuhn-Tucker conditions are
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i>x</i><span class="supsub">2<br>2</span>&nbsp;− λ<i>p</i><sub>1</sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 0, <i>x</i><sub>1</sub>&nbsp;≥ 0, and <i>x</i><sub>1</sub>·(<i>x</i><span class="supsub">2<br>2</span>&nbsp;−
+λ<i>p</i><sub>1</sub>)&nbsp;= 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+2<i>x</i><sub>1</sub><i>x</i><sub>2</sub>&nbsp;− λ<i>p</i><sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> 0, <i>x</i><sub>2</sub>&nbsp;≥ 0, and <i>x</i><sub>2</sub>·(2<i>x</i><sub>1</sub><i>x</i><sub>2</sub>&nbsp;− λ<i>p</i><sub>2</sub>)&nbsp;= 0</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+<i>p</i><sub>1</sub><i>x</i><sub>1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i><sub>2</sub>&nbsp;</td>
+      <td class="mathAlign2">≤</td>
+      <td class="mathAlign2"> <i>c</i>, λ&nbsp;≥ 0, and λ·(<i>p</i><sub>1</sub><i>x</i><sub>1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i><sub>2</sub>&nbsp;− <i>c</i>)&nbsp;= 0</td>
+</tr>
+</tbody></table></div>
+<p>
+If λ&nbsp;= 0 then from the first condition we have <i>x</i><sub>2</sub>&nbsp;= 0.  But ∇<i style="padding-right:0.2em;">f</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (<i>x</i><span class="supsub">2<br>2</span>,2<i>x</i><sub>1</sub><i>x</i><sub>2</sub>), which is (0,0) for <i>x</i><sub>2</sub>&nbsp;= 0.  Thus there is no solution of this type.
 </p><p>
-λ<sub>1</sub>&nbsp;&gt; 0 and λ<sub>2</sub>&nbsp;= 0: Since λ<sub>1</sub>&nbsp;&gt; 0 we have <i>x</i><sub>1</sub>&nbsp;= 2<i>x</i><sub>2</sub>&nbsp;− 1; from the first-order conditions we have <i>x</i><sub>1</sub>&nbsp;= −4/14, <i>x</i><sub>2</sub>&nbsp;= 5/14, and λ<sub>1</sub>&nbsp;= 3/14.  Since λ<sub>1</sub>&nbsp;≥ 0, a solution of the problem is
-(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (−4/14,&nbsp;5/14).
+If λ&nbsp;&gt; 0 then <i>p</i><sub>1</sub><i>x</i><sub>1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i><sub>2</sub>&nbsp;= <i>c</i>.  If <i>x</i><sub>2</sub>&nbsp;= 0 then ∇<i style="padding-right:0.2em;">f</i>(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (0,0), as above.  If <i>x</i><sub>1</sub>&nbsp;= 0 then <i>x</i><sub>2</sub>&nbsp;= 0 by the second set of conditions.  Thus
+<i>x</i><sub>1</sub>&nbsp;&gt; 0 and <i>x</i><sub>2</sub>&nbsp;&gt; 0, so that by the first two conditions we have <i>x</i><span class="supsub">2<br>2</span>&nbsp;= λ<i>p</i><sub>1</sub> and 2<i>x</i><sub>1</sub><i>x</i><sub>2</sub>&nbsp;= λ<i>p</i><sub>2</sub>, so that <i>x</i><span class="supsub">2<br>2</span>/<i>p</i><sub>1</sub>&nbsp;=
+2<i>x</i><sub>1</sub><i>x</i><sub>2</sub>/<i>p</i><sub>2</sub>, or <i>p</i><sub>2</sub><i>x</i><sub>2</sub>&nbsp;= 2<i>p</i><sub>1</sub><i>x</i><sub>1</sub>.  Substituting into the constraint <i>p</i><sub>1</sub><i>x</i><sub>1</sub>&nbsp;+ <i>p</i><sub>2</sub><i>x</i><sub>2</sub>&nbsp;= <i>c</i> we get <i>x</i><sub>1</sub>&nbsp;= <i>c</i>/(3<i>p</i><sub>1</sub>), <i>x</i><sub>2</sub>&nbsp;=
+2<i>c</i>/(3<i>p</i><sub>2</sub>), and λ&nbsp;= 4<i>c</i><sup>2</sup>/(9<i>p</i><sub>1</sub><i>p</i><span class="supsub">2<br>2</span>).
 </p><p>
-λ<sub>1</sub>&nbsp;= 0 and λ<sub>2</sub>&nbsp;&gt; 0: Since λ<sub>2</sub>&nbsp;&gt; 0 we have <i>x</i><sub>2</sub>&nbsp;= 2&nbsp;− 2<i>x</i><sub>1</sub>; from the first-order conditions we have <i>x</i><sub>1</sub>&nbsp;= 1, <i>x</i><sub>2</sub>&nbsp;= 0, and λ<sub>2</sub>&nbsp;= −1.  Since λ<sub>2</sub>&nbsp;&lt; 0, this case does not yield a solution.
-</p><p>
-Thus unique solution to the problem is (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (−4/14,&nbsp;5/14).
+Thus the solution of the problem is (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>)&nbsp;= (<i>c</i>/(3<i>p</i><sub>1</sub>), 2<i>c</i>/(3<i>p</i><sub>2</sub>)).
 </p></li></ol>
 </div>
 </li></ol>
@@ -389,7 +766,7 @@ Thus unique solution to the problem is (<i>x</i><sub>1</sub>, <i>x</i><sub>2</su
             <p>
             </p><form method="post" name="tutorialComment" id="tutorialComment" onsubmit="return validateForm();" action="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/saveTutorialComment">
                         <input type="hidden" name="commentId" value="0">
-            <input type="hidden" name="pageId" value="66">
+            <input type="hidden" name="pageId" value="68">
 
             
 
@@ -429,8 +806,8 @@ Thus unique solution to the problem is (<i>x</i><sub>1</sub>, <i>x</i><sub>2</su
         </div>
                 
             <div id="footerNotes">
-    	  Copyright © 1997–2016 by <a href="https://www.economics.utoronto.ca/osborne/">Martin J. Osborne</a>.
-              First posted 1997.  This version 2016-01-01.
+    	  Copyright © 1997–2022 by <a href="https://www.economics.utoronto.ca/osborne/">Martin J. Osborne</a>.
+              First posted 1997.  This version 2022-06-05.
     <br>
         Site built on the core of the <a href="http://pkp.sfu.ca/?q=ojs">OJS system</a>.
     </div><!-- footerNotes -->
