@@ -13,7 +13,7 @@
         </script>
     
     
-    <title>Mathematical methods for economic theory: 8.4 Exercises on linear first-order differential equations</title>
+    <title>Mathematical methods for economic theory: 8.5 Exercises on differential equations: phase diagrams for autonomous equations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="">
         <meta name="keywords" content="">
@@ -202,14 +202,14 @@
                                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/46"><img alt="Previous section" src="./index_files/backsec.gif" height="20" title="Differential equations"></a>
                                 </span>
 
-                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/49"><img alt="Previous page" src="./index_files/back.gif" height="20" title="Separable equations"></a>
+                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/50"><img alt="Previous page" src="./index_files/back.gif" height="20" title="Linear first-order equations"></a>
                 
                 <span class="tab">
                     <span class="contents"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/toc" class="menuAction">Contents</a></span>
                 </span>
 
                                     <span class="tab">
-                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/fle/t" class="menuAction">Text</a></span>
+                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/deq/t" class="menuAction">Text</a></span>
                     </span>
 
                                             <span class="tab">
@@ -222,7 +222,7 @@
                             <span class="tab">
                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/sch" class="menuAction" title="Search"><img alt="Search" src="./index_files/searchIcon.png"></a>
                 </span>
-                                        <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/51"><img alt="Next page" src="./index_files/next.gif" height="20" title="Phase diagrams"></a>
+                                        <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/52"><img alt="Next page" src="./index_files/next.gif" height="20" title="Second-order equations"></a>
                             <span class="hideable">
                                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/54"><img alt="Next section" src="./index_files/nextsec.gif" height="20" title="Difference equations"></a>
                                 </span>
@@ -268,128 +268,70 @@ window.onclick = function(event) {
         <div id="exercises">
 
         <header>
-            <h2>8.4 Exercises on linear first-order differential equations</h2>
+            <h2>8.5 Exercises on differential equations: phase diagrams for autonomous equations</h2>
         </header>
 
 	<ol type="1">
-<li>Find the general solution of <i>x</i>'(<i>t</i>)&nbsp;+ (1/2)<i>x</i>(<i>t</i>)&nbsp;= 1/4.  Determine the equilibrium state and examine its stability.
+<li>Draw the phase diagrams associated with the following differential equations and determine the nature of the possible equilibrium states.
+<ol type="a">
+<li><i>x</i>'(<i>t</i>)&nbsp;= <i>x</i>(<i>t</i>)&nbsp;− 1.
 <p>
 <a class="action" href="javascript:toggleSolution(1)">Solution</a></p><div class="solution" id="1" style="display: block;">
-<i>x</i>(<i>t</i>)&nbsp;= <i>C</i><i>e</i><sup>−<i>t</i>/2</sup>&nbsp;+ 1/2.  Equilibrium: <i>x</i>*&nbsp;= 1/2; stable.
-</div>
+The phase diagram is shown below.  <i>x</i>&nbsp;= 1 is unstable.
 <p>
-</p></li><li>Find the general solutions of the following differential equations, and in each case solve the associated initial value problem for <i>x</i>(0)&nbsp;= 1.
-<ol type="a">
-<li><i>x</i>'(<i>t</i>)&nbsp;− 3<i>x</i>(<i>t</i>)&nbsp;= 5.
-</li><li>3<i>x</i>'(<i>t</i>)&nbsp;+ 2<i>x</i>(<i>t</i>)&nbsp;+ 16&nbsp;= 0.
-</li><li><i>x</i>'(<i>t</i>)&nbsp;+ 2<i>x</i>(<i>t</i>)&nbsp;= <i>t</i><sup>2</sup>.
-</li></ol>
+<img alt="" src="./index_files/deqx1sg1.gif">
+</p></div>
+<p>
+</p></li><li><i>x</i>'(<i>t</i>)&nbsp;+ 2<i>x</i>(<i>t</i>)&nbsp;= 24.
 <p>
 <a class="action" href="javascript:toggleSolution(2)">Solution</a></p><div class="solution" id="2" style="display: block;">
-<ol type="a">
-<li><i>x</i>(<i>t</i>)&nbsp;= <i>C</i><i>e</i><sup>3<i>t</i></sup>&nbsp;− 5/3; <i>C</i>&nbsp;= 8/3.
-</li><li><i>x</i>(<i>t</i>)&nbsp;= <i>C</i><i>e</i><sup>−2<i>t</i>/3</sup>&nbsp;− 8; <i>C</i>&nbsp;= 9.
-</li><li><i>x</i>&nbsp;= <i>C</i><i>e</i><sup>−2<i>t</i></sup>&nbsp;+ (1/2)<i>t</i><sup>2</sup>&nbsp;− (1/2)<i>t</i>&nbsp;+ 1/4 (integrate by parts twice); <i>C</i>&nbsp;= 3/4.
-</li></ol>
-</div>
+The phase diagram is shown below.  <i>x</i>&nbsp;= 12 is stable.
 <p>
-</p></li><li>Solve the following differential equations.
-<ol type="a">
-<li><i>t</i><i>x</i>'(<i>t</i>)&nbsp;+ 2<i>x</i>(<i>t</i>)&nbsp;+ <i>t</i>&nbsp;= 0 for <i>t</i>&nbsp;≠ 0.
-</li><li><i>x</i>'(<i>t</i>)&nbsp;− <i>x</i>(<i>t</i>)/<i>t</i>&nbsp;= <i>t</i> for <i>t</i>&nbsp;&gt; 0.
-</li><li><i>x</i>'(<i>t</i>)&nbsp;− <i>t</i><i>x</i>(<i>t</i>)/(<i>t</i><sup>2</sup>&nbsp;− 1)&nbsp;= <i>t</i> for <i>t</i>&nbsp;&gt; 1.
-</li><li><i>x</i>'(<i>t</i>)&nbsp;− 2<i>x</i>(<i>t</i>)/<i>t</i>&nbsp;+ 2<i>a</i><sup>2</sup>/<i>t</i><sup>2</sup>&nbsp;= 0 for <i>t</i>&nbsp;&gt; 0.
-</li></ol>
+<img alt="" src="./index_files/deqx1sg2.gif">
+</p></div>
+<p>
+</p></li><li><i>x</i>'(<i>t</i>)&nbsp;= <i>x</i>(<i>t</i>)<sup>2</sup>&nbsp;− 9.
 <p>
 <a class="action" href="javascript:toggleSolution(3)">Solution</a></p><div class="solution" id="3" style="display: block;">
-<ol type="a">
-<li>Writing the equation in the standard form, we have
-<div class="equation"><i>x</i>'(<i>t</i>)&nbsp;+ (2/<i>t</i>)<i>x</i>(<i>t</i>)&nbsp;= −1.</div>
-Now, ∫<sup><i>t</i></sup>(2/<i>s</i>)<i>d</i><i>s</i>&nbsp;= 2&nbsp;ln&nbsp;<i>t</i>, so from the general solution of an equation of the form <i>x</i>'(<i>t</i>)&nbsp;+ <i>a</i>(<i>t</i>)<i>x</i>(<i>t</i>)&nbsp;= <i>b</i>(<i>t</i>) we have
-<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= <i>e</i><sup>-2&nbsp;ln&nbsp;<i>t</i></sup>[<i>C</i>&nbsp;− ∫<sup><i>t</i></sup><i>e</i><sup>2&nbsp;ln&nbsp;<i>u</i></sup><i>d</i><i>u</i>]</div>
-or
-<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= (1/<i>t</i><sup>2</sup>)[<i>C</i>&nbsp;− ∫<sup><i>t</i></sup><i>u</i><sup>2</sup><i>d</i><i>u</i>]</div>
-or
-<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= (1/<i>t</i><sup>2</sup>)[<i>C</i>&nbsp;− <i>t</i><sup>3</sup>/3]&nbsp;= <i>C</i>/<i>t</i><sup>2</sup>&nbsp;− <i>t</i>/3.</div>
-</li><li>We have ∫(−1/<i>t</i>)<i>d</i><i>t</i>&nbsp;= −ln&nbsp;<i>t</i>, so the integrating factor is 1/<i>t</i>.  Hence the solution is <i>x</i>(<i>t</i>)&nbsp;= <i>t</i>(<i>C</i>&nbsp;+ <i>t</i>).
-</li><li><i>x</i>(<i>t</i>)&nbsp;= <i>C</i>(<i>t</i><sup>2</sup>−1)<sup>1/2</sup>&nbsp;+ <i>t</i><sup>2</sup>&nbsp;− 1.
-</li><li><i>x</i>(<i>t</i>)&nbsp;= <i>C</i><i>t</i><sup>2</sup>&nbsp;+ 2<i>a</i><sup>2</sup>/3<i>t</i>.
-</li></ol>
-</div>
+The phase diagram is shown below.  <i>x</i>&nbsp;= −3 is stable; <i>x</i>&nbsp;= 3 is unstable.
 <p>
-</p></li><li>In the theory of auctions, an initial value problem of the form
-<div class="equation"><i>x</i>'(<i>t</i>)<i>G</i>(<i>t</i>)&nbsp;+ <i>x</i>(<i>t</i>)<i>G</i>'(<i>t</i>)&nbsp;= <i>t</i><i>G</i>'(<i>t</i>) with <i>x</i>(<i>t</i><sub>0</sub>)&nbsp;= <i>t</i><sub>0</sub>,</div>
-where <i>G</i> is a known function, arises.  (The variable <i>t</i> is interpreted as a player's valuation of the object for sale in the auction.)  Solve this equation, expressing the solution in terms of the function <i>G</i> (but not its derivative).  (If you start by converting the equation into the standard form and finding the integrating factor, reflect afterwards on the fact that you did
-not need to do so.)
+<img alt="" src="./index_files/deqx1sg3.gif">
+</p></div>
+<p>
+</p></li><li><i>x</i>'(<i>t</i>)&nbsp;= <i>x</i>(<i>t</i>)<sup>3</sup>&nbsp;+ <i>x</i>(<i>t</i>)<sup>2</sup>&nbsp;− <i>x</i>(<i>t</i>)&nbsp;− 1.
 <p>
 <a class="action" href="javascript:toggleSolution(4)">Solution</a></p><div class="solution" id="4" style="display: block;">
-The left-hand side of the differential equation is the derivative of <i>x</i>(<i>t</i>)<i>G</i>(<i>t</i>).  Thus integrating both sides leads to
-<div class="equation"><i>x</i>(<i>t</i>)<i>G</i>(<i>t</i>)&nbsp;= ∫<sup><i>t</i></sup><i>s</i><i>G</i>'(<i>s</i>)<i>d</i><i>s</i>.</div>
-Applying integration by parts to the right-hand side produces
-<div class="equation"><i>t</i><i>G</i>(<i>t</i>)&nbsp;− ∫<sup><i>t</i></sup><i>G</i>(<i>s</i>)<i>d</i><i>s</i>.</div>
-Thus the general solution of the differential equation is
-<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= <i>t</i>&nbsp;− (∫<sup><i>t</i></sup><i>G</i>(<i>s</i>)<i>d</i><i>s</i>)/<i>G</i>(<i>t</i>).</div>
-The condition <i>x</i>(<i>t</i><sub>0</sub>)&nbsp;= <i>t</i><sub>0</sub> implies that the solution of the initial value problem is
-<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= <i>t</i>&nbsp;− (∫<span class="supsub"><i>t</i><br><i>t</i><sub>0</sub></span> <i>G</i>(<i>s</i>)<i>d</i><i>s</i>)/<i>G</i>(<i>t</i>).</div>
-</div>
+Note that <i>x</i>'(<i>t</i>)&nbsp;= (<i>x</i>(<i>t</i>)&nbsp;− 1)(<i>x</i>(<i>t</i>)&nbsp;+ 1)<sup>2</sup>.  <i>x</i>&nbsp;= 1 is unstable; <i>x</i>&nbsp;= −1 is unstable.  (It is stable from the right and unstable from the left.)  The phase diagram is shown below.
 <p>
-</p></li><li>Solve the equation
-<div class="equation"><i>x</i>'(<i>t</i>)&nbsp;− <i>x</i>(<i>t</i>)/(<i>t</i><sup>2</sup>&nbsp;− 1) = 1,</div>
-restricting to <i>t</i>&nbsp;&gt; 1.  (This question is more difficult than the others.)
+<img alt="" src="./index_files/deqx1sg4.gif">
+</p></div>
+<p>
+</p></li><li><i>x</i>'(<i>t</i>)&nbsp;= 3<i>x</i>(<i>t</i>)<sup>2</sup>&nbsp;+ 1.
 <p>
 <a class="action" href="javascript:toggleSolution(5)">Solution</a></p><div class="solution" id="5" style="display: block;">
-Let <i>a</i>(<i>t</i>)&nbsp;= −1/(<i>t</i><sup>2</sup>&nbsp;− 1) and <i>b</i>(<i>t</i>)&nbsp;= 1 for all <i>t</i>.  Using the fact that
-<div class="equation">1/(<i>s</i><sup>2</sup>&nbsp;− 1)&nbsp;= (1/2)[1/(<i>s</i>&nbsp;− 1)&nbsp;− 1/(<i>s</i>&nbsp;+ 1)],</div>
-we have
-<div class="equation">∫<sup><i>t</i></sup> <i>a</i>(<i>s</i>)<i>d</i><i>s</i>&nbsp;= −∫<sup><i>t</i></sup> (1/(<i>s</i><sup>2</sup>−1))<i>d</i><i>s</i>&nbsp;= −(1/2)ln((<i>t</i>−1)/(<i>t</i>&nbsp;+ 1))</div>
-and hence
-<div class="equation"><i>e</i><sup>−∫</sup><sup><sup><i>t</i></sup></sup><sup><i>a</i>(<i>s</i>)<i>d</i><i>s</i></sup>&nbsp;= ((<i>t</i>−1)/(<i>t</i>&nbsp;+ 1))<sup>1/2</sup>.</div>
+The phase diagram is shown below.  There are no equilibrium states.
 <p>
-Also
-</p><div class="equation">
-  <table class="mathAlign">
-    <tbody><tr>
-      <td class="alignRight">∫<sup><i>t</i></sup><i>e</i><sup>−∫</sup><sup><sup><i>u</i></sup></sup><sup><i>a</i>(<i>s</i>)<i>d</i><i>s</i></sup><i>b</i>(<i>u</i>)<i>d</i><i>u</i>&nbsp;</td>
-      <td class="mathAlign2">=
-∫<sup><i>t</i></sup><i>e</i><sup>−(1/2)</sup><sup>ln</sup><sup>((<i>u</i>−1)/(<i>u</i>+1))</sup><i>d</i><i>u</i></td>
-</tr>
- <tr>
-  <td class="alignRight">
-&nbsp;</td>
-      <td class="mathAlign2">= ∫<sup><i>t</i></sup>((<i>u</i>+1)/(<i>u</i>−1))<sup>1/2</sup><i>d</i><i>u</i></td>
-</tr>
- <tr>
-  <td class="alignRight">
-&nbsp;</td>
-      <td class="mathAlign2">= ∫<sup><i>t</i></sup>[(<i>u</i>+1)(<i>u</i>+1)/((<i>u</i>−1)(<i>u</i>+1))]<sup>1/2</sup><i>d</i><i>u</i></td>
-</tr>
- <tr>
-  <td class="alignRight">
-&nbsp;</td>
-      <td class="mathAlign2">= ∫<sup><i>t</i></sup>(<i>u</i>+1)/(<i>u</i><sup>2</sup>−1)<sup>1/2</sup><i>d</i><i>u</i></td>
-</tr>
- <tr>
-  <td class="alignRight">
-&nbsp;</td>
-      <td class="mathAlign2">= ∫<sup><i>t</i></sup><i>u</i>/(<i>u</i><sup>2</sup>−1)<sup>1/2</sup><i>d</i><i>u</i>&nbsp;+ ∫<sup><i>t</i></sup>1/(<i>u</i><sup>2</sup>−1)<sup>1/2</sup><i>d</i><i>u</i></td>
-</tr>
- <tr>
-  <td class="alignRight">
-&nbsp;</td>
-      <td class="mathAlign2">= (<i>u</i><sup>2</sup>−1)<sup>1/2</sup>&nbsp;+ ln[<i>u</i>&nbsp;+ (<i>u</i><sup>2</sup>−1)<sup>1/2</sup>].</td>
-</tr>
-</tbody></table></div>
-(To calculate the second integral, use the substitution <i>x</i>&nbsp;= sec&nbsp;θ, so that <i>d</i><i>x</i>&nbsp;= sec&nbsp;θ&nbsp;tan&nbsp;θ&nbsp;dθ and the integrand is sec&nbsp;θ, with integral ln|sec&nbsp;θ&nbsp;+ tan&nbsp;θ|&nbsp;+ <i>C</i>.)
+<img alt="" src="./index_files/deqx1sg5.gif">
+</p></div>
 <p>
-Thus the solution of the equation is
-</p><div class="equation"><i>x</i>(<i>t</i>)&nbsp;= ((<i>t</i>−1)/(<i>t</i>+1))<sup>1/2</sup>[<i>C</i>&nbsp;+ (<i>t</i><sup>2</sup>&nbsp;− 1)<sup>1/2</sup>&nbsp;+ ln(<i>t</i>&nbsp;+ (<i>t</i><sup>2</sup>&nbsp;− 1)<sup>1/2</sup>)].</div>
-</div>
+</p></li><li><i>x</i>'(<i>t</i>)&nbsp;= <i>x</i>(<i>t</i>)<i>e</i><sup><i>x</i>(<i>t</i>)</sup>.
 <p>
+<a class="action" href="javascript:toggleSolution(6)">Solution</a></p><div class="solution" id="6" style="display: block;">
+The phase diagram is shown below.  There is a single equilibrium, <i>x</i>&nbsp;= 0, which is unstable.
+<p>
+<img alt="" src="./index_files/deqx1sg6.gif">
+</p></div>
+<p>
+</p></li><li><i>x</i>'(<i>t</i>)&nbsp;= (<i>x</i>(<i>t</i>)&nbsp;+ 2)(<i>x</i>(<i>t</i>))<sup>2</sup>.
+<p>
+<a class="action" href="javascript:toggleSolution(7)">Solution</a></p><div class="solution" id="7" style="display: block;">
+The phase diagram is shown below.  There are two equilibria, <i>x</i>&nbsp;= −2 and <i>x</i>&nbsp;= 0.  The equilibrium <i>x</i>&nbsp;= −2 is unstable; the equilibrium <i>x</i>&nbsp;= 0 is unstable.  (It is stable from the left, but not from the right.)
+<p>
+<img alt="" src="./index_files/deqx1sg7.gif">
+</p></div>
+</li></ol>
+</li></ol>
 
-
-
-
-</p></li></ol>
 
 
 
@@ -405,7 +347,7 @@ Thus the solution of the equation is
             <p>
             </p><form method="post" name="tutorialComment" id="tutorialComment" onsubmit="return validateForm();" action="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/saveTutorialComment">
                         <input type="hidden" name="commentId" value="0">
-            <input type="hidden" name="pageId" value="77">
+            <input type="hidden" name="pageId" value="79">
 
             
 
@@ -445,8 +387,8 @@ Thus the solution of the equation is
         </div>
                 
             <div id="footerNotes">
-    	  Copyright © 1997–2020 by <a href="https://www.economics.utoronto.ca/osborne/">Martin J. Osborne</a>.
-              First posted 1997.  This version 2020-02-24.
+    	  Copyright © 1997–2016 by <a href="https://www.economics.utoronto.ca/osborne/">Martin J. Osborne</a>.
+              First posted 1997.  This version 2016-01-07.
     <br>
         Site built on the core of the <a href="http://pkp.sfu.ca/?q=ojs">OJS system</a>.
     </div><!-- footerNotes -->
