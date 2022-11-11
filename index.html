@@ -13,7 +13,7 @@
         </script>
     
     
-    <title>Mathematical methods for economic theory: 8.6 Exercises on second-order differential equations</title>
+    <title>Mathematical methods for economic theory: 8.7 Exercises on systems of first-order linear differential equations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="">
         <meta name="keywords" content="">
@@ -202,14 +202,14 @@
                                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/46"><img alt="Previous section" src="./index_files/backsec.gif" height="20" title="Differential equations"></a>
                                 </span>
 
-                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/51"><img alt="Previous page" src="./index_files/back.gif" height="20" title="Phase diagrams"></a>
+                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/52"><img alt="Previous page" src="./index_files/back.gif" height="20" title="Second-order equations"></a>
                 
                 <span class="tab">
                     <span class="contents"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/toc" class="menuAction">Contents</a></span>
                 </span>
 
                                     <span class="tab">
-                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/sde/t" class="menuAction">Text</a></span>
+                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/sim/t" class="menuAction">Text</a></span>
                     </span>
 
                                             <span class="tab">
@@ -222,7 +222,7 @@
                             <span class="tab">
                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/sch" class="menuAction" title="Search"><img alt="Search" src="./index_files/searchIcon.png"></a>
                 </span>
-                                        <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/53"><img alt="Next page" src="./index_files/next.gif" height="20" title="Systems of equations"></a>
+                                        <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/54"><img alt="Next page" src="./index_files/next.gif" height="20" title="Difference equations"></a>
                             <span class="hideable">
                                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/54"><img alt="Next section" src="./index_files/nextsec.gif" height="20" title="Difference equations"></a>
                                 </span>
@@ -268,127 +268,82 @@ window.onclick = function(event) {
         <div id="exercises">
 
         <header>
-            <h2>8.6 Exercises on second-order differential equations</h2>
+            <h2>8.7 Exercises on systems of first-order linear differential equations</h2>
         </header>
 
 	<ol type="1">
-<li>Find the general solutions of the following differential equations and the solutions of the associated initial value problems for the given initial conditions.  In each case, determine whether the equilibrium is stable.
-<ol type="a">
-<li><i>x</i>"(<i>t</i>)&nbsp;+ 3<i>x</i>'(<i>t</i>)&nbsp;− 4<i>x</i>(<i>t</i>)&nbsp;= 12.  Initial conditions: <i>x</i>(0)&nbsp;= 4, <i>x</i>'(0)&nbsp;= 2.
-</li><li><i>x</i>"(<i>t</i>)&nbsp;− 2<i>x</i>'(<i>t</i>)&nbsp;+ <i>x</i>(<i>t</i>)&nbsp;= 3.  Initial conditions: <i>x</i>(0)&nbsp;= 4, <i>x</i>'(0)&nbsp;= 2.
-</li><li><i>x</i>"(<i>t</i>)&nbsp;+ 4<i>x</i>'(<i>t</i>)&nbsp;+ 8<i>x</i>(<i>t</i>)&nbsp;= 2.  Initial conditions: <i>x</i>(0)&nbsp;= 9/4, <i>x</i>'(0)&nbsp;= 4.
-</li></ol>
+<li>Find the general solution of the system of equations
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i>x</i>'(<i>t</i>)&nbsp;</td>
+      <td class="mathAlign2">= 4<i>y</i>(<i>t</i>)</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+<i>y</i>'(<i>t</i>)&nbsp;</td>
+      <td class="mathAlign2">= −<i>x</i>(<i>t</i>)&nbsp;+ 4<i>y</i>(<i>t</i>).</td>
+</tr>
+</tbody></table></div>
 <p>
 <a class="action" href="javascript:toggleSolution(1)">Solution</a></p><div class="solution" id="1" style="display: block;">
-<ol type="a">
-<li>The roots of the characteristic equation are 1 and −4.  Thus the general solution of the homogeneous equation is
-<div class="equation"><i>A</i><i>e</i><sup><i>t</i></sup>&nbsp;+ <i>B</i><i>e</i><sup>−4<i>t</i></sup>.</div>
-One solution of the original equation is <i>x</i>(<i>t</i>)&nbsp;= −3.  Thus the general solution of the original equation is
-<div class="equation"><i>A</i><i>e</i><sup><i>t</i></sup>&nbsp;+ <i>B</i><i>e</i><sup>−4<i>t</i></sup>&nbsp;− 3.</div>
-For the given initial conditions we have <i>A</i>&nbsp;= 6 and <i>B</i>&nbsp;= 1.  The equilibrium is not stable.
-</li><li><i>x</i>(<i>t</i>)&nbsp;= <i>A</i><sub>1</sub><i>e</i><sup><i>t</i></sup>&nbsp;+ <i>A</i><sub>2</sub><i>t</i><i>e</i><sup><i>t</i></sup>&nbsp;+ 3;  <i>A</i><sub>1</sub>&nbsp;= 1 and <i>A</i><sub>2</sub>&nbsp;= 1.  The equilibrium is not stable.
-</li><li><i>x</i>(<i>t</i>)&nbsp;= <i>e</i><sup>−2<i>t</i></sup>(<i>A</i><sub>1</sub>cos&nbsp;2<i>t</i>&nbsp;+ <i>A</i><sub>2</sub>sin&nbsp;2<i>t</i>)&nbsp;+ 1/4;  <i>A</i><sub>1</sub>&nbsp;= 2 and <i>A</i><sub>2</sub>&nbsp;= 4.  The equilibrium is stable.
-</li></ol>
+Isolating <i>y</i>(<i>t</i>) in the first equation we have <i>y</i>(<i>t</i>)&nbsp;= <i>x</i>'(<i>t</i>)/4, so that <i>y</i>'(<i>t</i>)&nbsp;= <i>x</i>"(<i>t</i>)/4.  Substituting these expressions into the second equation we get
+<div class="equation"><i>x</i>"(<i>t</i>)/4&nbsp;= −<i>x</i>(<i>t</i>)&nbsp;+ <i>x</i>'(<i>t</i>),</div>
+or
+<div class="equation"><i>x</i>"(<i>t</i>)&nbsp;− 4<i>x</i>'(<i>t</i>)&nbsp;+ 4<i>x</i>(<i>t</i>)&nbsp;= 0.</div>
+The characteristic equation is (<i>r</i>&nbsp;− 2)<sup>2</sup>, which has the repeated root <i>r</i>&nbsp;= 2.  Thus the general solution of this equation is
+<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= (<i>A</i>&nbsp;+ <i>B</i><i>t</i>)<i>e</i><sup>2<i>t</i></sup>.</div>
+Given <i>y</i>(<i>t</i>)&nbsp;= <i>x</i>'(<i>t</i>)/4, we thus have
+<div class="equation"><i>y</i>(<i>t</i>)&nbsp;= (1/2)(<i>A</i>&nbsp;+ <i>B</i><i>t</i>)<i>e</i><sup>2<i>t</i></sup>&nbsp;+ (1/4)<i>B</i><i>e</i><sup>2<i>t</i></sup>&nbsp;= [(1/4)<i>B</i>&nbsp;+ (1/2)<i>A</i>&nbsp;+ (1/2)<i>B</i><i>t</i>]<i>e</i><sup>2<i>t</i></sup>.</div>
 </div>
 <p>
-</p></li><li>Find a solution of the differential equation
-<div class="equation"><i>x</i>"(<i>t</i>)&nbsp;+ 2<i>x</i>'(<i>t</i>)&nbsp;+ <i>x</i>(<i>t</i>)&nbsp;= <i>t</i>.</div>
+</p></li><li>Find the general solution of the following system of equations and the particular solution with <i>x</i>(0)&nbsp;= 1 and <i>y</i>(0)&nbsp;= 0.
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i>x</i>'(<i>t</i>)&nbsp;</td>
+      <td class="mathAlign2">= <i>x</i>(<i>t</i>)&nbsp;− 5<i>y</i>(<i>t</i>)</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+<i>y</i>'(<i>t</i>)&nbsp;</td>
+      <td class="mathAlign2">= 2<i>x</i>(<i>t</i>)&nbsp;− 5<i>y</i>(<i>t</i>).</td>
+</tr>
+</tbody></table></div>
 <p>
 <a class="action" href="javascript:toggleSolution(2)">Solution</a></p><div class="solution" id="2" style="display: block;">
-<i>x</i>(<i>t</i>)&nbsp;= <i>t</i>&nbsp;− 2.
+The two equations generate the second-order equation
+<div class="equation"><i>x</i>"(<i>t</i>)&nbsp;+ 4<i>x</i>'(<i>t</i>)&nbsp;+ 5<i>x</i>(<i>t</i>)&nbsp;= 0.</div>
+The characteristic equation has complex roots.  The solution of the second-order equation is
+<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= <i>e</i><sup>−2<i>t</i></sup>(<i>A</i>&nbsp;cos&nbsp;<i>t</i>&nbsp;+ <i>B</i>&nbsp;sin&nbsp;<i>t</i>).</div>
+Calculating <i>x</i>' and substituting into the first equation we obtain
+<div class="equation"><i>y</i>(<i>t</i>)&nbsp;= (1/5)<i>e</i><sup>−2<i>t</i></sup>((3<i>A</i>&nbsp;− <i>B</i>)cos&nbsp;<i>t</i>&nbsp;+ (<i>A</i>&nbsp;+ 3<i>B</i>)sin&nbsp;<i>t</i>).</div>
+
+For the given initial conditions we have <i>A</i>&nbsp;= 1 and <i>B</i>&nbsp;= 3.
 </div>
 <p>
-</p></li><li>Find the general solution of the differential equation <i>x</i>"(<i>t</i>)&nbsp;− 4<i>x</i>'(<i>t</i>)&nbsp;+ 4<i>x</i>(<i>t</i>)&nbsp;= 5 and the solution of the associated initial value problem for the initial conditions <i>x</i>(0)&nbsp;= 4 and <i>x</i>'(0)&nbsp;= 6.
+</p></li><li>Find the solution of the system
+<div class="equation">
+  <table class="mathAlign">
+    <tbody><tr>
+      <td class="alignRight"><i>x</i>'(<i>t</i>)&nbsp;</td>
+      <td class="mathAlign2">= −<i>b</i><i>y</i>(<i>t</i>)</td>
+</tr>
+ <tr>
+  <td class="alignRight">
+<i>y</i>'(<i>t</i>)&nbsp;</td>
+      <td class="mathAlign2">= <i>b</i><i>x</i>(<i>t</i>)</td>
+</tr>
+</tbody></table></div>
+given the initial conditions <i>x</i>(0)&nbsp;= <i>C</i><sub>1</sub> and <i>y</i>(0)&nbsp;= <i>C</i><sub>2</sub>.
 <p>
 <a class="action" href="javascript:toggleSolution(3)">Solution</a></p><div class="solution" id="3" style="display: block;">
-The general solution is <i>x</i>(<i>t</i>)&nbsp;= <i>A</i><sub>1</sub><i>e</i><sup>2<i>t</i></sup>&nbsp;+ <i>A</i><sub>2</sub><i>t</i><i>e</i><sup>2<i>t</i></sup>&nbsp;+ 5/4.  For the initial condition <i>x</i>(0)&nbsp;= 4 we need <i>A</i><sub>1</sub>&nbsp;+ 5/4&nbsp;= 4, or <i>A</i><sub>1</sub>&nbsp;= 11/4, and for the condition <i>x</i>'(0)&nbsp;= 6 we need <i>A</i><sub>2</sub>&nbsp;+
-2<i>A</i><sub>1</sub>&nbsp;= 6, so that <i>A</i><sub>2</sub>&nbsp;= 6&nbsp;− 22/4&nbsp;= 1/2.
+We have <i>x</i>"(<i>t</i>)&nbsp;= −<i>b</i><i>y</i>'(<i>t</i>)&nbsp;= −<i>b</i><sup>2</sup><i>x</i>(<i>t</i>), or
+<div class="equation"><i>x</i>"(<i>t</i>)&nbsp;+ <i>b</i><sup>2</sup><i>x</i>(<i>t</i>)&nbsp;= 0.</div>
+The characteristic equation is <i>r</i><sup>2</sup>&nbsp;+ <i>b</i><sup>2</sup>&nbsp;= 0, which has complex roots.  Thus, given the general form of the solution to such an equation, the solution of our equation is
+<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= <i>C</i><sub>1</sub>cos&nbsp;<i>b</i><i>t</i>&nbsp;− <i>C</i><sub>2</sub>sin&nbsp;<i>b</i><i>t</i>.</div>
+Using <i>y</i>(<i>t</i>)&nbsp;= −<i>x</i>'(<i>t</i>)/<i>b</i>, we have <i>y</i>(<i>t</i>)&nbsp;= <i>C</i><sub>1</sub>sin&nbsp;<i>b</i><i>t</i>&nbsp;+ <i>C</i><sub>2</sub>cos&nbsp;<i>b</i><i>t</i>.  (Remember that the derivative of sin&nbsp;<i>b</i><i>t</i> is <i>b</i>cos&nbsp;<i>b</i><i>t</i>, and the derivative of cos&nbsp;<i>b</i><i>t</i> is −<i>b</i>sin&nbsp;<i>b</i><i>t</i>.)
 </div>
-<p>
-</p></li><li>Find the general solution of the differential equation
-<div class="equation"><i>x</i>"(<i>t</i>)&nbsp;− <i>x</i>'(<i>t</i>)&nbsp;+ 2<i>x</i>(<i>t</i>)&nbsp;= 2<i>t</i><sup>3</sup>.</div>
-<p>
-<a class="action" href="javascript:toggleSolution(4)">Solution</a></p><div class="solution" id="4" style="display: block;">
-The characteristic equation of the homogeneous equation is <i>r</i><sup>2</sup>&nbsp;− <i>r</i>&nbsp;+ 2&nbsp;= 0, so the general solution of the homogeneous equation is
-<div class="equation"><i>A</i><i>e</i><sup><i>t</i>/2</sup>cos(√7<i>t</i>/2)&nbsp;+ <i>B</i><i>e</i><sup><i>t</i>/2</sup>sin(√7<i>t</i>/2).</div>
-Now find a solution of the original equation.  Try <i style="padding-right:0.2em;">f</i>(<i>t</i>)&nbsp;= <i>C</i>&nbsp;+ <i>D</i><i>t</i>&nbsp;+ <i>E</i><i>t</i><sup>2</sup>&nbsp;+ <i style="padding-right:0.2em;">F</i><i>t</i><sup>3</sup>.  We have <i style="padding-right:0.2em;">f</i>'(<i>t</i>)&nbsp;= <i>D</i>&nbsp;+ 2<i>E</i><i>t</i>&nbsp;+
-3<i style="padding-right:0.2em;">F</i><i>t</i><sup>2</sup> and <i style="padding-right:0.2em;">f</i>"(<i>t</i>)&nbsp;= 2<i>E</i>&nbsp;+ 6<i style="padding-right:0.2em;">F</i><i>t</i>, so for <i style="padding-right:0.2em;">f</i> to be a solution we need
-<div class="equation">
-  <table class="mathAlign">
-    <tbody><tr>
-      <td class="alignRight">2<i style="padding-right:0.2em;">F</i>&nbsp;</td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2"> 2</td>
-</tr>
- <tr>
-  <td class="alignRight">
-−3<i style="padding-right:0.2em;">F</i>&nbsp;+ 2<i>E</i>&nbsp;</td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2"> 0</td>
-</tr>
- <tr>
-  <td class="alignRight">
-6<i style="padding-right:0.2em;">F</i>&nbsp;− 2<i>E</i>&nbsp;+ 2<i>D</i>&nbsp;</td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2"> 0</td>
-</tr>
- <tr>
-  <td class="alignRight">
-2<i>E</i>&nbsp;− <i>D</i>&nbsp;+ 2<i>C</i>&nbsp;</td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2"> 0.</td>
-</tr>
-</tbody></table></div>
-These equations yield <i style="padding-right:0.2em;">F</i>&nbsp;= 1, <i>E</i>&nbsp;= 3/2, <i>D</i>&nbsp;= −3/2, and <i>C</i>&nbsp;= −9/4.  Thus the general solution of the original differential equation is
-<div class="equation"><i>A</i><i>e</i><sup><i>t</i>/2</sup>cos(√7<i>t</i>/2)&nbsp;+ <i>B</i><i>e</i><sup><i>t</i>/2</sup>sin(√7<i>t</i>/2)&nbsp;− 9/4&nbsp;− 3<i>t</i>/2&nbsp;+ (3/2)<i>t</i><sup>2</sup>&nbsp;+ <i>t</i><sup>3</sup>.</div>
-</div>
-<p>
-</p></li><li>Find the general solution of the differential equation
-<div class="equation"><i>x</i>"(<i>t</i>)&nbsp;− 4<i>x</i>'(<i>t</i>)&nbsp;+ 4<i>x</i>(<i>t</i>)&nbsp;= −4<i>t</i>&nbsp;+ 4<i>t</i><sup>2</sup>.</div>
-<p>
-<a class="action" href="javascript:toggleSolution(5)">Solution</a></p><div class="solution" id="5" style="display: block;">
-The characteristic equation of the homogeneous equation is <i>r</i><sup>2</sup>&nbsp;− 4<i>r</i>&nbsp;+ 4&nbsp;= 0, for which 2 is a repeated root.  Thus the general solution of the homogeneous equation is
-<div class="equation">(<i>A</i>&nbsp;+ <i>B</i><i>t</i>)<i>e</i><sup>2<i>t</i></sup>.</div>
-Now find a solution of the original equation.  Try <i style="padding-right:0.2em;">f</i>(<i>t</i>)&nbsp;= <i>C</i>&nbsp;+ <i>D</i><i>t</i>&nbsp;+ <i>E</i><i>t</i><sup>2</sup>.  We have <i style="padding-right:0.2em;">f</i>'(<i>t</i>)&nbsp;= <i>D</i>&nbsp;+ 2<i>E</i><i>t</i> and <i style="padding-right:0.2em;">f</i>"(<i>t</i>)&nbsp;= 2<i>E</i>, so for <i style="padding-right:0.2em;">f</i> to be a
-solution we need
-<div class="equation">
-  <table class="mathAlign">
-    <tbody><tr>
-      <td class="alignRight">4<i>E</i>&nbsp;</td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2"> 4</td>
-</tr>
- <tr>
-  <td class="alignRight">
-−8<i>E</i>&nbsp;+ 4<i>D</i>&nbsp;</td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2"> −4</td>
-</tr>
- <tr>
-  <td class="alignRight">
-2<i>E</i>&nbsp;− 4<i>D</i>&nbsp;+ 4<i>C</i>&nbsp;</td>
-      <td class="mathAlign2">&nbsp;=&nbsp;</td>
-      <td class="mathAlign2"> 0.</td>
-</tr>
-</tbody></table></div>
-These equations yield <i>C</i>&nbsp;= 1/2 and <i>D</i>&nbsp;= <i>E</i>&nbsp;= 1.  Thus the general solution of the original differential equation is
-<div class="equation">(<i>A</i>&nbsp;+ <i>B</i><i>t</i>)<i>e</i><sup>2<i>t</i></sup>&nbsp;+ 1/2&nbsp;+ <i>t</i>&nbsp;+ <i>t</i><sup>2</sup>.</div>
-</div>
-<p>
-</p></li><li>Find the general solution of the differential equation
-<div class="equation"><i>x</i>"(<i>t</i>)&nbsp;+ <i>x</i>(<i>t</i>)&nbsp;= 1&nbsp;+ <i>t</i><sup>2</sup>.</div>
-<p>
-<a class="action" href="javascript:toggleSolution(6)">Solution</a></p><div class="solution" id="6" style="display: block;">
-The characteristic equation of the homogeneous equation is <i>r</i><sup>2</sup>&nbsp;+ 1&nbsp;= 0, which has complex roots.  Thus the general solution of the homogeneous equation is
-<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= <i>A</i>cos&nbsp;<i>t</i>&nbsp;+ <i>B</i>sin&nbsp;<i>t</i>.</div>
-
-To find a solution of the original equation, try <i>x</i>(<i>t</i>)&nbsp;= <i>a</i>&nbsp;+ <i>b</i><i>t</i>&nbsp;+ <i>c</i><i>t</i><sup>2</sup>.  We have <i>x</i>"(<i>t</i>)&nbsp;= 2<i>c</i>, so that for <i>x</i>(<i>t</i>) to solve the original equation we need <i>a</i>&nbsp;= −1, <i>b</i>&nbsp;= 0, and <i>c</i>&nbsp;= 1.
-
-We conclude that the general solution of the original equation is
-<div class="equation"><i>x</i>(<i>t</i>)&nbsp;= <i>A</i>cos&nbsp;<i>t</i>&nbsp;+ <i>B</i>sin&nbsp;<i>t</i>&nbsp;− 1&nbsp;+ <i>t</i><sup>2</sup>.</div>
-</div>
-
-
 </li></ol>
 
 
@@ -405,7 +360,7 @@ We conclude that the general solution of the original equation is
             <p>
             </p><form method="post" name="tutorialComment" id="tutorialComment" onsubmit="return validateForm();" action="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/saveTutorialComment">
                         <input type="hidden" name="commentId" value="0">
-            <input type="hidden" name="pageId" value="81">
+            <input type="hidden" name="pageId" value="83">
 
             
 
@@ -446,7 +401,7 @@ We conclude that the general solution of the original equation is
                 
             <div id="footerNotes">
     	  Copyright © 1997–2016 by <a href="https://www.economics.utoronto.ca/osborne/">Martin J. Osborne</a>.
-              First posted 1997.  This version 2016-07-02.
+              First posted 1997.  This version 2016-01-01.
     <br>
         Site built on the core of the <a href="http://pkp.sfu.ca/?q=ojs">OJS system</a>.
     </div><!-- footerNotes -->
