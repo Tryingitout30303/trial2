@@ -1,0 +1,172 @@
+/**
+ * xy2html.css
+ *
+ */
+
+/* these settings mean that subscripts and superscripts on a line won't spread out the line */
+/* (according to https://www.cs.tut.fi/~jkorpela/www/linespacing.html) */
+sup, sub { 
+    /* Following is same as vertical-align: 0; */
+    /* vertical-align: baseline; */
+    vertical-align: 0;
+    position: relative;
+}
+
+sup {
+    bottom: 1ex;
+}
+
+sub {
+    top: 0.8ex;
+}
+
+sub.prime {
+    margin-left:-0.4em;
+}
+
+sub.doublePrime {
+    margin-left:-0.6em;
+}
+
+sub.star {
+    margin-left:-0.65em;
+}
+
+/* can wrap math using span.supsub in this to avoid linebreaks */
+.nobr {
+    white-space: nowrap;	
+}
+
+span.supsub {
+    display: inline-block;
+    /* Prevents interline spacing from increasing despite line-height setting */
+    margin: -0.2em 0;
+    vertical-align:-0.6em;
+    line-height: 1.2em;
+    font-size: smaller;
+    text-align: left;
+    text-indent: 0;  // so doesn't get text-indent from enclosing environment (e.g. breakable equation)
+}
+
+div.equation {
+    margin: 1em 0em 1em 3em;	
+}
+
+table.mathAlign {
+}
+
+table.mathAlign td.mathAlign1 {
+    padding: 0;
+    text-align: right;
+}
+
+table.mathAlign td.alignRight {
+    padding: 0.2em 0;
+    text-align: right;
+}
+
+table.mathAlign td.mathAlign2 {
+    /* padding to improve spacing when lines contain sub/superscripts  (see e.g. QFD)*/
+    padding: 0.2em 0;
+}
+
+table.mathAlignTop {
+}
+
+table.mathAlignTop td.mathAlign1 {
+    padding: 0;
+    text-align: right;
+    vertical-align: top;
+}
+
+table.mathAlignTop td.alignRight {
+    padding: 0.2em 0;
+    text-align: right;
+    vertical-align: top;
+}
+
+table.mathAlignTop td.mathAlign2 {
+    /* padding to improve spacing when lines contain sub/superscripts  (see e.g. QFD)*/
+    padding: 0.2em 0 0.2em 1em;
+    vertical-align: top;
+    text-indent: -1em; // combined with left padding, creates hang indent in wrapped cell
+}
+
+table.mathCases {
+}
+
+table.mathCases td.function {
+    padding-right: 1em;	
+}
+
+table.matrix {
+	/* margin settings needed to get matrix to be centered when it is the top or bottom of a fraction */
+	/* (in which case one has nested tables).  See for example MAT page in mathTutorial. */
+	/* The centering isn't exact, because there is some space on the right of the numerator (coming from where?) */
+	margin-left:auto;
+	margin-right:auto;
+}
+
+table.matrix td.delimiterLeft {
+}
+
+table.matrix td.delimiterRight {
+}
+
+table.matrix td.cell {
+	text-align: center;
+	padding: 0 0.3em 0 0.3em;	
+}
+
+table.frac td.fracTop {
+	text-align: center;	
+	padding: 0 0 0.4em 0;
+}
+
+table.frac td.fracBottom {
+	text-align: center;	
+	padding: 0.25em 0 0 0;
+}
+
+td.fracRule {
+	border-top: 1px solid #000;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.game {
+	border-collapse:collapse;
+}
+
+table.game td.cell {
+	text-align: center;	
+}
+
+table.game td.action1 {
+	padding-right: 0.5em;
+}
+
+table.game td.action2 {
+	text-align:center;
+}
+
+table.game td.payoffCell {
+	padding: 0 0.5em 0 0.5em;
+	text-align:center;
+	border:1px solid #000;
+}
+
+img.middle {
+    vertical-align: middle;
+}
+
+img.top {
+    vertical-align: top;
+}
+
+@media screen and (max-device-width: 900px) {   
+    div.equation {
+        margin: 0.6em 0em 0.6em 0.5em;	
+    }
+}
+

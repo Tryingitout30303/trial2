@@ -1,0 +1,445 @@
+/**
+ * tutorial.css
+ *
+ */
+
+/*** For acknowledgment of comment ***/
+/*** see also tutorialHeader.tpl ***/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*** End code for acknowledgment of comment ***/
+
+/**
+ * Common HTML elements
+ */
+
+.black {
+    color:#000000;	
+}
+
+.green {
+    color:#428C42;	
+}
+
+.red {
+    color: #FF0000;
+}
+
+code {
+   font-size:1.3em;
+   color:#886600;	
+}
+
+/* when jumping to point in file, highlight the point */
+
+:target {
+	-webkit-animation: target-fade 1s;
+	-moz-animation: target-fade 1s;
+	-o-animation: target-fade 1s;
+	animation: target-fade 1s;
+}
+
+@-webkit-keyframes target-fade {
+	from { background-color: yellow; } /* [1] */
+	to { background-color: transparent; }
+}
+
+@-moz-keyframes target-fade {
+	from { background-color: yellow; } /* [1] */
+	to { background-color: transparent; }
+}
+
+@-o-keyframes target-fade {
+	from { background-color: yellow; } /* [1] */
+	to { background-color: transparent; }
+}
+
+@keyframes target-fade {
+	from { background-color: yellow; } /* [1] */
+	to { background-color: transparent; }
+}
+
+/**
+ * Main layout elements
+ */
+
+.container {
+	width: 900px;
+	line-height: 125%;
+	height: 100%;
+        /* Following (and companion specs in div.header and .body and #footer) don't work on iOS (iPhone) */
+        /*display: -webkit-box;*/      /* OLD - iOS 6-, Safari 3.1-6 */
+        /*display: -moz-box;*/         /* OLD - Firefox 19- (buggy but mostly works) */
+        /*display: -ms-flexbox;*/      /* TWEENER - IE 10 */
+        /*display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        */
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+div.header {
+	padding: 0;
+	text-align: center;
+        /* See .container
+        -webkit-flex-shrink: 0;
+	flex-shrink: 0;
+        */
+}
+
+#headerTitle {
+	text-align: left;
+	padding-bottom: 0.25em;
+}
+
+.body {
+    /* See .container
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    overflow:auto;
+    min-height: 2em;
+*/
+}
+
+#footer {
+    padding: 0.5em 0em 0.3em 0em;
+    min-height: 40px;
+    clear: both;
+    /* See .container
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    */
+}
+
+#footerContent {
+    /*width: 100%;*/
+    /*vertical-align:middle;*/
+    border-top: 2px dotted #000;
+    padding-top:0.5em;
+    /*margin-top: 1em;*/
+}
+
+#footerNotes {
+    margin-top:0.5em;
+    font-size: 0.7em;
+}
+
+.row {
+    display: -webkit-flex;
+    display:flex;
+}
+
+.rowBreaking {
+    display: -webkit-flex;
+    display:flex;
+}
+
+ul.gs {
+	list-style-type:square;
+}
+
+ul.gs li {
+	color:#BBBBBB;
+}
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	margin: 0;
+	padding: 0;
+	padding-right: 1.5em;
+	display: inline;
+}
+
+ul.menu li.current {
+	font-weight: bold;
+}
+
+ul.menu a {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+ul.steplist {
+	margin: 0;
+	padding: 0;
+	list-style-type: decimal;
+}
+
+ul.steplist li {
+	margin: 0;
+	padding: 0;
+	font-size: 0.85em;
+	padding-right: 0.5em;
+	display: inline;
+	text-transform: uppercase;
+}
+
+ul.steplist li.current {
+	font-weight: bold;
+}
+
+ul.steplist a {
+	text-decoration: none;
+}
+
+ul.plain {
+	list-style-type: none;
+	padding-left: 1.5em;
+}
+
+/*
+ul.toc {
+	list-style-type: none;
+	padding-left: 1.5em;
+	margin-top: 0.5em;
+}
+
+ul.toc li.tocline0 {
+    margin-left: 0em;
+    padding: 0 0 0 1.5em;
+    text-indent: -1.5em;
+}
+
+ul.toc li.tocline1 {
+    margin-left: 2em;
+    padding: 0 0 0 2em;
+    text-indent: -2em;
+}
+
+ul.toc li.tocline2 {
+    margin-left: 4em;
+    padding: 0 0 0 2.5em;
+    text-indent: -2.5em;
+}
+*/
+
+ul.hang{
+	padding: 1em;
+	/*background-color: white;*/
+	margin: 0;
+	
+}
+ul.hang ul{
+	padding: 0;
+	margin: 0 0 0 2em;
+}
+
+ul.hang li{
+	list-style: none;
+	padding: 0.7em 0 0 1.5em;
+	text-indent: -1.5em;
+}
+
+ul.hang li.indent{
+	padding: 0.7em 0 0 1.5em;
+	text-indent: 0em;
+}
+
+table.toc {
+  margin: 0 0 0 1em;
+}
+
+table.toc td {
+  vertical-align: top;
+  padding-left: 0.5em;
+}
+
+/*
+p.tocline0 {
+  display: table;
+  margin: 0 0 0 1.5em;
+}
+
+p.tocline0 span {
+  display: table-cell;
+  margin-left:1em;
+}
+
+p.tocline0 span + span {
+  color: black;
+  text-indent: 0em;
+  padding-left: 0.5em;
+}
+
+p.tocline1 {
+  display: table;
+  margin: 0 0 0 2.5em;
+}
+
+p.tocline1 span {
+  display: table-cell;
+  margin-left:1em;
+}
+
+p.tocline1 span + span {
+  color: black;
+  text-indent: 0em;
+  padding-left: 0.5em;
+}
+
+p.tocline2 {
+  display: table;
+  margin: 0 0 0 3.5em;
+}
+
+p.tocline2 span {
+  display: table-cell;
+  margin-left:1em;
+}
+
+p.tocline2 span + span {
+  color: black;
+  text-indent: 0em;
+  padding-left: 0.5em;
+}
+*/
+
+div.separator {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 0.25em;
+	padding: 0;
+	border-bottom: 1px dotted #000;
+	font-size: 0.5em;
+	line-height: 25%;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr.top {
+    vertical-align: top;
+}
+
+td.center {
+    text-align: center;
+}
+
+div.commentForm {
+    border-bottom: 2px dotted #000;    
+}
+
+/* image won't take up more than 100% of with of enclosing environment (for display on small screens) */
+/* used in mathTutorial osm */
+img.scaled100 {
+    max-width: 100%;
+}
+
+/* for svg */
+line {
+  stroke: black;
+  stroke-width: 2;
+}
+
+path {
+  stroke: black;
+  stroke-width: 2;
+  fill:none;
+}
+
+path.guideline {
+    stroke-dasharray: 5 5;
+    stroke: #AAAAAA;
+    fill: none;
+}
+
+path.axis {
+  stroke: #999999;
+}
+
+ellipse {
+  stroke: black;
+  stroke-width: 2;
+}
+
+circle {
+  stroke: black;
+  stroke-width: 2;
+}
+
+div.surfacePlot {
+    width: 350px;
+    height: 350px;
+}
+
+@media screen and (max-device-width: 900px) {
+
+  .rowBreaking {
+	  display:block;
+  }
+
+  .container {
+	width: 100%;
+  }
+ 
+  br.menu {
+	display: none;  
+  }
+
+  table.toc {
+    margin: 0 0 0 0.5em;
+  }
+
+  #footerContent {
+	/*width: 100%;*/
+	padding:0.5em 0 0 0.5em;
+  }
+  
+  div.surfacePlot {
+    width: 250px;
+    height: 250px;
+  }
+ 
+  
+}
