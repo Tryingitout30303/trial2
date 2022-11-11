@@ -13,7 +13,7 @@
         </script>
     
     
-    <title>Mathematical methods for economic theory: 9.1 Exercises on first-order difference equations</title>
+    <title>Mathematical methods for economic theory: 9.2 Exercises on second-order difference equations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="">
         <meta name="keywords" content="">
@@ -202,14 +202,14 @@
                                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/54"><img alt="Previous section" src="./index_files/backsec.gif" height="20" title="Difference equations"></a>
                                 </span>
 
-                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/54"><img alt="Previous page" src="./index_files/back.gif" height="20" title="Difference equations"></a>
+                                    <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/55"><img alt="Previous page" src="./index_files/back.gif" height="20" title="First-order difference equations"></a>
                 
                 <span class="tab">
                     <span class="contents"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/toc" class="menuAction">Contents</a></span>
                 </span>
 
                                     <span class="tab">
-                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/fod/t" class="menuAction">Text</a></span>
+                        <span class="text"><a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/sod/t" class="menuAction">Text</a></span>
                     </span>
 
                                             <span class="tab">
@@ -222,7 +222,7 @@
                             <span class="tab">
                     <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/sch" class="menuAction" title="Search"><img alt="Search" src="./index_files/searchIcon.png"></a>
                 </span>
-                                        <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/56"><img alt="Next page" src="./index_files/next.gif" height="20" title="Second-order equations"></a>
+                                        <img alt="Blank" src="./index_files/blank.gif" height="20">
                             <span class="hideable">
                                     <img alt="Blank" src="./index_files/blank.gif" height="20">
                                 </span>
@@ -268,61 +268,34 @@ window.onclick = function(event) {
         <div id="exercises">
 
         <header>
-            <h2>9.1 Exercises on first-order difference equations</h2>
+            <h2>9.2 Exercises on second-order difference equations</h2>
         </header>
 
 	<ol type="1">
-<li>Solve the following difference equations. In each case, determine whether the solution path is convergent or divergent.
+<li>Solve the following difference equations and determine whether the solution paths are convergent or divergent, oscillating or not.
 <ol type="a">
-<li><i>x</i><sub><i>t</i></sub>&nbsp;= −3<i>x</i><sub><i>t</i>−1</sub>&nbsp;+ 4.
-</li><li><i>x</i><sub><i>t</i></sub>&nbsp;= (1/2)<i>x</i><sub><i>t</i>−1</sub>&nbsp;+ 3.
+<li><i>x</i><sub><i>t</i>+2</sub>&nbsp;+ 3<i>x</i><sub><i>t</i>+1</sub>&nbsp;− (7/4)<i>x</i><sub><i>t</i></sub>&nbsp;= 9.
+</li><li><i>x</i><sub><i>t</i>+2</sub>&nbsp;− 2<i>x</i><sub><i>t</i>+1</sub>&nbsp;+ 2<i>x</i><sub><i>t</i></sub>&nbsp;= 1.
+</li><li><i>x</i><sub><i>t</i>+2</sub>&nbsp;− <i>x</i><sub><i>t</i>+1</sub>&nbsp;+ (1/4)<i>x</i><sub><i>t</i></sub>&nbsp;= 2.
+</li><li><i>x</i><sub><i>t</i>+2</sub>&nbsp;+ 2<i>x</i><sub><i>t</i>+1</sub>&nbsp;+ <i>x</i><sub><i>t</i></sub>&nbsp;= 9·2<sup><i>t</i></sup>.
+</li><li><i>x</i><sub><i>t</i>+2</sub>&nbsp;− 3<i>x</i><sub><i>t</i>+1</sub>&nbsp;+ 2<i>x</i><sub><i>t</i></sub>&nbsp;= 3·5<sup><i>t</i></sup>&nbsp;+ sin((1/2)π<i>t</i>).
 </li></ol>
 <p>
 <a class="action" href="javascript:toggleSolution(1)">Solution</a></p><div class="solution" id="1" style="display: block;">
 <ol type="a">
-<li><i>x</i><sub><i>t</i></sub>&nbsp;= 1&nbsp;+ (−3)<sup><i>t</i></sup>(<i>x</i><sub>0</sub>&nbsp;− 1); divergent (and oscillating).
-</li><li><i>x</i><sub><i>t</i></sub>&nbsp;= 6&nbsp;+ (1/2)<sup><i>t</i></sup>(<i>x</i><sub>0</sub>&nbsp;− 6); convergent.
-</li></ol>
-</div>
-<p>
-</p></li><li>Consider a model of price adjustment that differs from the <a href="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/fod/FOD#m:ex1">one described in the text</a> only in that the suppliers' price expectations are adaptive, so that
-<div class="equation"><i>P</i>*<sub class="star"><i>t</i></sub>&nbsp;= <i>P</i>*<sub class="star"><i>t</i>−1</sub>&nbsp;+ η(<i>p</i><sub><i>t</i>−1</sub>&nbsp;− <i>P</i>*<sub class="star"><i>t</i>−1</sub>)</div>
-where 0&nbsp;&lt; η&nbsp;≤ 1 and <i>P</i>*<sub class="star"><i>t</i></sub> is the expected price in period&nbsp;<i>t</i>, and supply depends on the expected price:
-<div class="equation"><i>S</i><sub><i>t</i></sub>&nbsp;= −β&nbsp;+ α<i>P</i>*<sub class="star"><i>t</i></sub>,</div>
-where α &gt; 0 and β &gt; 0.  (Note that the parameters α and β here differ from the parameters α and β in the model presented in the text.)  The other components of the model remain <i>D</i><sub><i>t</i></sub>&nbsp;= γ&nbsp;− δ<i>p</i><sub><i>t</i></sub>, with γ &gt; 0 and δ &gt; 0, and <i>S</i><sub><i>t</i></sub>&nbsp;=
-<i>D</i><sub><i>t</i></sub>.
-<ol type="a">
-<li>Find the difference equation in <i>p</i><sub><i>t</i></sub> that this model generates (first isolate <i>P</i>*<sub class="star"><i>t</i></sub> in the supply function.)
-</li><li>Solve this difference equation for <i>P</i><sub><i>t</i></sub>.  For what values of η is the time path of <i>p</i><sub><i>t</i></sub> oscillatory? convergent?
-</li></ol>
-<p>
-<a class="action" href="javascript:toggleSolution(2)">Solution</a></p><div class="solution" id="2" style="display: block;">
-<ol type="a">
-<li>After isolating <i>P</i>*<sub class="star"><i>t</i></sub> in the supply function, substitute the expression you get into the equation for <i>P</i>*<sub class="star"><i>t</i></sub>, and then substitute for <i>S</i><sub><i>t</i></sub> the expression for <i>D</i><sub><i>t</i></sub>, to get <i>p</i><sub><i>t</i></sub>&nbsp;= (1&nbsp;− η&nbsp;−
-ηα/δ)<i>p</i><sub><i>t</i>−1</sub>&nbsp;+ η(γ&nbsp;+ β)/δ.
-</li><li><i>p</i><sub><i>t</i></sub>&nbsp;= (<i>p</i><sub>0</sub>&nbsp;− (γ&nbsp;+ β)/(δ&nbsp;+ α))(1&nbsp;− η&nbsp;− ηα/δ)<sup><i>t</i></sup>&nbsp;+ (γ&nbsp;+ β)/(δ&nbsp;+ α).  Oscillates if 1&nbsp;− η&nbsp;− ηα/δ &lt; 0, or η&nbsp;&gt; δ/(δ&nbsp;+ α).  Converges if
-|1&nbsp;− η&nbsp;− ηα/δ| &lt; 1, or 0 &lt; η(δ&nbsp;+ α)/δ &lt; 2, or η&nbsp;&lt; 2δ/(δ&nbsp;+ α) (given that α &gt; 0, δ &gt; 0, and η &gt; 0).
-</li></ol>
-</div>
-<p>
-</p></li><li>Consider the difference equation
-<div class="equation"><i>y</i><sub><i>t</i>+1</sub>(<i>a</i>&nbsp;+ <i>b</i><i>y</i><sub><i>t</i></sub>)&nbsp;= <i>c</i><i>y</i><sub><i>t</i></sub></div>
-where <i>a</i>, <i>b</i>, and <i>c</i> are positive constants and <i>y</i><sub>0</sub>&nbsp;&gt; 0.
-<ol type="a">
-<li>Show that <i>y</i><sub><i>t</i></sub>&nbsp;&gt; 0 for all <i>t</i>.
-</li><li>Define <i>x</i><sub><i>t</i></sub>&nbsp;= 1/<i>y</i><sub><i>t</i></sub>.  Show that by using this substitution, the new difference equation is of the type <i>x</i><sub><i>t</i></sub>&nbsp;= α<i>x</i><sub><i>t</i>+1</sub>&nbsp;+ β.  Use this fact to solve the difference equation
-<div class="equation"><i>y</i><sub><i>t</i>+1</sub>(2&nbsp;+ 3<i>y</i><sub><i>t</i></sub>)&nbsp;= 4<i>y</i><sub><i>t</i></sub></div>
-with <i>y</i><sub>0</sub>&nbsp;= 1/2.  What is the limit of <i>y</i><sub><i>t</i></sub> as <i>t</i>&nbsp;→&nbsp;∞?
-</li></ol>
-<p>
-<a class="action" href="javascript:toggleSolution(3)">Solution</a></p><div class="solution" id="3" style="display: block;">
-<ol type="a">
-<li>Given that <i>a</i>&nbsp;&gt; 0, <i>b</i>&nbsp;&gt; 0, and <i>c</i>&nbsp;&gt; 0 we have <i>y</i><sub><i>t</i></sub>&nbsp;&gt; 0 so long as <i>y</i><sub><i>t</i>−1</sub>&nbsp;&gt; 0.  Since <i>y</i><sub>0</sub>&nbsp;&gt; 0 we thus have <i>y</i><sub><i>t</i></sub>&nbsp;&gt; 0 for all <i>t</i>.
-</li><li>Substituting gives <i>x</i><sub><i>t</i>+1</sub>&nbsp;= (<i>a</i>/<i>c</i>)<i>x</i><sub><i>t</i></sub>&nbsp;+ <i>b</i>/<i>c</i>.  Thus the solution of the specific equation given is, in the <i>x</i><sub><i>t</i></sub> variable, <i>x</i><sub><i>t</i></sub>&nbsp;= (1/2)<sup><i>t</i>+1</sup>&nbsp;+ 3/2, or <i>y</i><sub><i>t</i></sub>&nbsp;= [(1/2)<sup><i>t</i>+1</sup>&nbsp;+
-3/2]<sup>−1</sup>.  As <i>t</i>&nbsp;→ ∞ we have <i>y</i><sub><i>t</i></sub>&nbsp;→&nbsp;2/3.
+<li><i>A</i><sub>1</sub>(1/2)<sup><i>t</i></sup>&nbsp;+ <i>A</i><sub>2</sub>(−(7/2))<sup><i>t</i></sup>&nbsp;+ 4.  Nonconvergent oscillations.
+</li><li>(√2)<sup><i>t</i></sup>(<i>A</i><sub>1</sub>cos (π/4)<i>t</i>&nbsp;+ <i>A</i><sub>2</sub>sin (π/4)<i>t</i>)&nbsp;+ 1.  Nonconvergent oscillation.
+</li><li><i>A</i><sub>1</sub>(1/2)<sup><i>t</i></sup>&nbsp;+ <i>A</i><sub>2</sub><i>t</i>(1/2)<sup><i>t</i></sup>&nbsp;+ 8.  Convergent, non-oscillating.
+</li><li>The characteristic equation is <i>m</i><sup>2</sup>&nbsp;+ 2<i>m</i>&nbsp;+ 1&nbsp;= (<i>m</i>+1)<sup>2</sup>&nbsp;= 0, which has a double root of −1.  So the general solution of the homogeneous equation is <i>x</i><sub><i>t</i></sub>&nbsp;= (<i>C</i><sub>1</sub>&nbsp;+ <i>C</i><sub>2</sub><i>t</i>)(−1)<sup><i>t</i></sup>.  A particular solution is obtained by inserting
+<i>u</i><sub><i>t</i></sub>*&nbsp;= <i>A</i>2<sup><i>t</i></sup>, which yields <i>A</i>&nbsp;= 1.  So the general solution of the inhomogeneous equation is <i>x</i><sub><i>t</i></sub>&nbsp;= (<i>C</i><sub>1</sub>&nbsp;+ <i>C</i><sub>2</sub><i>t</i>)(−1)<sup><i>t</i></sup>&nbsp;+ 2<sup><i>t</i></sup>.
+</li><li>By using the method of undetermined coefficients the constants <i>A</i>, <i>B</i>, and <i>C</i> in the particular solution <i>u</i>*<sub class="star"><i>t</i></sub>&nbsp;= <i>A</i>5<sup><i>t</i></sup>&nbsp;+ <i>B</i>cos (π/2)<i>t</i>&nbsp;+ <i>C</i>sin&nbsp;(π/2)<i>t</i>, we obtain <i>A</i>&nbsp;= 1/4, <i>B</i>&nbsp;= 3/10, and <i>C</i>&nbsp;= 1/10.  So the general solution to the
+equation is
+<div class="equation"><i>x</i><sub><i>t</i></sub>&nbsp;= <i>C</i><sub>1</sub>&nbsp;+ <i>C</i><sub>2</sub>2<sup><i>t</i></sup>&nbsp;+ (1/4)5<sup><i>t</i></sup>&nbsp;+ (3/10)cos((π/2)<i>t</i>)&nbsp;+ (1/10)sin((π/2)<i>t</i>).</div>
 </li></ol>
 </div>
 </li></ol>
+
+
 
 
 
@@ -338,7 +311,7 @@ with <i>y</i><sub>0</sub>&nbsp;= 1/2.  What is the limit of <i>y</i><sub><i>t</i
             <p>
             </p><form method="post" name="tutorialComment" id="tutorialComment" onsubmit="return validateForm();" action="https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/saveTutorialComment">
                         <input type="hidden" name="commentId" value="0">
-            <input type="hidden" name="pageId" value="86">
+            <input type="hidden" name="pageId" value="88">
 
             
 
@@ -379,7 +352,7 @@ with <i>y</i><sub>0</sub>&nbsp;= 1/2.  What is the limit of <i>y</i><sub><i>t</i
                 
             <div id="footerNotes">
     	  Copyright © 1997–2016 by <a href="https://www.economics.utoronto.ca/osborne/">Martin J. Osborne</a>.
-              First posted 1997.  This version 2016-01-07.
+              First posted 1997.  This version 2016-01-01.
     <br>
         Site built on the core of the <a href="http://pkp.sfu.ca/?q=ojs">OJS system</a>.
     </div><!-- footerNotes -->
